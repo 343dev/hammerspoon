@@ -1,0 +1,845 @@
+[
+  {
+    "Constant": [],
+    "submodules": [],
+    "Function": [],
+    "Variable": [
+      {
+        "doc": "Default hotkey mapping used by start() when bindHotkeys() has not been called.\nMaps the show action to Ctrl+Alt+Cmd+P.",
+        "stripped_doc": [
+          "Default hotkey mapping used by start() when bindHotkeys() has not been called.",
+          "Maps the show action to Ctrl+Alt+Cmd+P."
+        ],
+        "name": "defaultHotkeys",
+        "desc": "Default hotkey mapping used by start() when bindHotkeys() has not been called.",
+        "notes": [],
+        "signature": "Gopass.defaultHotkeys",
+        "type": "Variable",
+        "returns": [],
+        "def": "Gopass.defaultHotkeys",
+        "parameters": []
+      },
+      {
+        "doc": "Executable name or path for gopass. The command is launched via /usr/bin/env.",
+        "stripped_doc": [
+          "Executable name or path for gopass. The command is launched via /usr/bin/env."
+        ],
+        "name": "gopassBin",
+        "desc": "Executable name or path for gopass. The command is launched via /usr/bin/env.",
+        "notes": [],
+        "signature": "Gopass.gopassBin",
+        "type": "Variable",
+        "returns": [],
+        "def": "Gopass.gopassBin",
+        "parameters": []
+      },
+      {
+        "doc": "Argument list used to fetch password-store entry names.",
+        "stripped_doc": [
+          "Argument list used to fetch password-store entry names."
+        ],
+        "name": "listArgs",
+        "desc": "Argument list used to fetch password-store entry names.",
+        "notes": [],
+        "signature": "Gopass.listArgs",
+        "type": "Variable",
+        "returns": [],
+        "def": "Gopass.listArgs",
+        "parameters": []
+      },
+      {
+        "doc": "Argument prefix used before the selected entry name when decrypting an entry.",
+        "stripped_doc": [
+          "Argument prefix used before the selected entry name when decrypting an entry."
+        ],
+        "name": "showArgsPrefix",
+        "desc": "Argument prefix used before the selected entry name when decrypting an entry.",
+        "notes": [],
+        "signature": "Gopass.showArgsPrefix",
+        "type": "Variable",
+        "returns": [],
+        "def": "Gopass.showArgsPrefix",
+        "parameters": []
+      },
+      {
+        "doc": "Timeout, in seconds, for listing entries. Set to 0 or nil to disable.",
+        "stripped_doc": [
+          "Timeout, in seconds, for listing entries. Set to 0 or nil to disable."
+        ],
+        "name": "listTimeoutSeconds",
+        "desc": "Timeout, in seconds, for listing entries. Set to 0 or nil to disable.",
+        "notes": [],
+        "signature": "Gopass.listTimeoutSeconds",
+        "type": "Variable",
+        "returns": [],
+        "def": "Gopass.listTimeoutSeconds",
+        "parameters": []
+      },
+      {
+        "doc": "Timeout, in seconds, for decrypting an entry. Set to 0 or nil to disable.",
+        "stripped_doc": [
+          "Timeout, in seconds, for decrypting an entry. Set to 0 or nil to disable."
+        ],
+        "name": "showTimeoutSeconds",
+        "desc": "Timeout, in seconds, for decrypting an entry. Set to 0 or nil to disable.",
+        "notes": [],
+        "signature": "Gopass.showTimeoutSeconds",
+        "type": "Variable",
+        "returns": [],
+        "def": "Gopass.showTimeoutSeconds",
+        "parameters": []
+      },
+      {
+        "doc": "Number of times to retry gopass commands that time out.",
+        "stripped_doc": [
+          "Number of times to retry gopass commands that time out."
+        ],
+        "name": "gopassRetryOnTimeout",
+        "desc": "Number of times to retry gopass commands that time out.",
+        "notes": [],
+        "signature": "Gopass.gopassRetryOnTimeout",
+        "type": "Variable",
+        "returns": [],
+        "def": "Gopass.gopassRetryOnTimeout",
+        "parameters": []
+      },
+      {
+        "doc": "Additional PATH entries passed to gopass and gpg subprocesses. Useful because\nGUI-launched Hammerspoon can inherit a minimal launchd PATH.",
+        "stripped_doc": [
+          "Additional PATH entries passed to gopass and gpg subprocesses. Useful because",
+          "GUI-launched Hammerspoon can inherit a minimal launchd PATH."
+        ],
+        "name": "extraPathEntries",
+        "desc": "Additional PATH entries passed to gopass and gpg subprocesses. Useful because",
+        "notes": [],
+        "signature": "Gopass.extraPathEntries",
+        "type": "Variable",
+        "returns": [],
+        "def": "Gopass.extraPathEntries",
+        "parameters": []
+      },
+      {
+        "doc": "Extra environment variables passed to gopass and gpg subprocesses.\nExample: `{ GOPASS_HOMEDIR = \"/Users/you/.local/share/gopass\" }`.",
+        "stripped_doc": [
+          "Extra environment variables passed to gopass and gpg subprocesses.",
+          "Example: `{ GOPASS_HOMEDIR = \"/Users/you/.local/share/gopass\" }`."
+        ],
+        "name": "extraEnv",
+        "desc": "Extra environment variables passed to gopass and gpg subprocesses.",
+        "notes": [],
+        "signature": "Gopass.extraEnv",
+        "type": "Variable",
+        "returns": [],
+        "def": "Gopass.extraEnv",
+        "parameters": []
+      },
+      {
+        "doc": "Application name to focus while gopass waits for passphrase entry.",
+        "stripped_doc": [
+          "Application name to focus while gopass waits for passphrase entry."
+        ],
+        "name": "pinentryAppName",
+        "desc": "Application name to focus while gopass waits for passphrase entry.",
+        "notes": [],
+        "signature": "Gopass.pinentryAppName",
+        "type": "Variable",
+        "returns": [],
+        "def": "Gopass.pinentryAppName",
+        "parameters": []
+      },
+      {
+        "doc": "Number of seconds to keep looking for pinentryAppName after decryption starts.",
+        "stripped_doc": [
+          "Number of seconds to keep looking for pinentryAppName after decryption starts."
+        ],
+        "name": "pinentryFocusAssistSeconds",
+        "desc": "Number of seconds to keep looking for pinentryAppName after decryption starts.",
+        "notes": [],
+        "signature": "Gopass.pinentryFocusAssistSeconds",
+        "type": "Variable",
+        "returns": [],
+        "def": "Gopass.pinentryFocusAssistSeconds",
+        "parameters": []
+      },
+      {
+        "doc": "Polling interval, in seconds, used while focusing pinentryAppName.",
+        "stripped_doc": [
+          "Polling interval, in seconds, used while focusing pinentryAppName."
+        ],
+        "name": "pinentryFocusAssistInterval",
+        "desc": "Polling interval, in seconds, used while focusing pinentryAppName.",
+        "notes": [],
+        "signature": "Gopass.pinentryFocusAssistInterval",
+        "type": "Variable",
+        "returns": [],
+        "def": "Gopass.pinentryFocusAssistInterval",
+        "parameters": []
+      },
+      {
+        "doc": "Maximum number of rows shown in the entry chooser.",
+        "stripped_doc": [
+          "Maximum number of rows shown in the entry chooser."
+        ],
+        "name": "maxEntryRows",
+        "desc": "Maximum number of rows shown in the entry chooser.",
+        "notes": [],
+        "signature": "Gopass.maxEntryRows",
+        "type": "Variable",
+        "returns": [],
+        "def": "Gopass.maxEntryRows",
+        "parameters": []
+      },
+      {
+        "doc": "Number of seconds to cache the entry list. Set to 0 or nil to always refresh.",
+        "stripped_doc": [
+          "Number of seconds to cache the entry list. Set to 0 or nil to always refresh."
+        ],
+        "name": "cacheEntriesSeconds",
+        "desc": "Number of seconds to cache the entry list. Set to 0 or nil to always refresh.",
+        "notes": [],
+        "signature": "Gopass.cacheEntriesSeconds",
+        "type": "Variable",
+        "returns": [],
+        "def": "Gopass.cacheEntriesSeconds",
+        "parameters": []
+      },
+      {
+        "doc": "Whether to open the Hammerspoon console when a gopass/gpg command fails.",
+        "stripped_doc": [
+          "Whether to open the Hammerspoon console when a gopass/gpg command fails."
+        ],
+        "name": "openConsoleOnError",
+        "desc": "Whether to open the Hammerspoon console when a gopass/gpg command fails.",
+        "notes": [],
+        "signature": "Gopass.openConsoleOnError",
+        "type": "Variable",
+        "returns": [],
+        "def": "Gopass.openConsoleOnError",
+        "parameters": []
+      },
+      {
+        "doc": "Whether start() should run lightweight gopass and gpg availability checks.",
+        "stripped_doc": [
+          "Whether start() should run lightweight gopass and gpg availability checks."
+        ],
+        "name": "healthCheckOnStart",
+        "desc": "Whether start() should run lightweight gopass and gpg availability checks.",
+        "notes": [],
+        "signature": "Gopass.healthCheckOnStart",
+        "type": "Variable",
+        "returns": [],
+        "def": "Gopass.healthCheckOnStart",
+        "parameters": []
+      },
+      {
+        "doc": "Timeout, in seconds, for each startup health-check command.",
+        "stripped_doc": [
+          "Timeout, in seconds, for each startup health-check command."
+        ],
+        "name": "healthCheckTimeoutSeconds",
+        "desc": "Timeout, in seconds, for each startup health-check command.",
+        "notes": [],
+        "signature": "Gopass.healthCheckTimeoutSeconds",
+        "type": "Variable",
+        "returns": [],
+        "def": "Gopass.healthCheckTimeoutSeconds",
+        "parameters": []
+      },
+      {
+        "doc": "Seconds before clearing the clipboard if it still contains the copied secret.\nSet to nil to disable automatic clearing.",
+        "stripped_doc": [
+          "Seconds before clearing the clipboard if it still contains the copied secret.",
+          "Set to nil to disable automatic clearing."
+        ],
+        "name": "clipboardAutoClearSeconds",
+        "desc": "Seconds before clearing the clipboard if it still contains the copied secret.",
+        "notes": [],
+        "signature": "Gopass.clipboardAutoClearSeconds",
+        "type": "Variable",
+        "returns": [],
+        "def": "Gopass.clipboardAutoClearSeconds",
+        "parameters": []
+      },
+      {
+        "doc": "When true, selected non-URL fields are typed into the previously focused\nwindow. When false, selected fields are copied to the clipboard. URL fields\nalways open as URLs.",
+        "stripped_doc": [
+          "When true, selected non-URL fields are typed into the previously focused",
+          "window. When false, selected fields are copied to the clipboard. URL fields",
+          "always open as URLs."
+        ],
+        "name": "pasteIntoField",
+        "desc": "When true, selected non-URL fields are typed into the previously focused",
+        "notes": [],
+        "signature": "Gopass.pasteIntoField",
+        "type": "Variable",
+        "returns": [],
+        "def": "Gopass.pasteIntoField",
+        "parameters": []
+      },
+      {
+        "doc": "Delay, in seconds, between refocusing the target window and typing a value.",
+        "stripped_doc": [
+          "Delay, in seconds, between refocusing the target window and typing a value."
+        ],
+        "name": "pasteDelaySeconds",
+        "desc": "Delay, in seconds, between refocusing the target window and typing a value.",
+        "notes": [],
+        "signature": "Gopass.pasteDelaySeconds",
+        "type": "Variable",
+        "returns": [],
+        "def": "Gopass.pasteDelaySeconds",
+        "parameters": []
+      },
+      {
+        "doc": "Time window, in seconds, during which show() reopens the last viewed entry\ncard instead of showing the full entry list.",
+        "stripped_doc": [
+          "Time window, in seconds, during which show() reopens the last viewed entry",
+          "card instead of showing the full entry list."
+        ],
+        "name": "reopenCardSeconds",
+        "desc": "Time window, in seconds, during which show() reopens the last viewed entry",
+        "notes": [],
+        "signature": "Gopass.reopenCardSeconds",
+        "type": "Variable",
+        "returns": [],
+        "def": "Gopass.reopenCardSeconds",
+        "parameters": []
+      }
+    ],
+    "stripped_doc": [],
+    "type": "Module",
+    "Deprecated": [],
+    "desc": "Keyboard-driven UI for gopass: search password-store entries, decrypt via",
+    "Constructor": [],
+    "Field": [],
+    "Method": [
+      {
+        "doc": "Prepares the Spoon. Called automatically by hs.loadSpoon().\n\nThis method does not start tasks, timers, watchers, or bind hotkeys; call\nstart() to activate the Spoon.\n\nParameters:\n * None\n\nReturns:\n * The Gopass object",
+        "stripped_doc": [
+          "Prepares the Spoon. Called automatically by hs.loadSpoon().",
+          "",
+          "This method does not start tasks, timers, watchers, or bind hotkeys; call",
+          "start() to activate the Spoon.",
+          ""
+        ],
+        "name": "init",
+        "desc": "Prepares the Spoon. Called automatically by hs.loadSpoon().",
+        "notes": [],
+        "signature": "Gopass:init()",
+        "type": "Method",
+        "returns": [
+          " * The Gopass object"
+        ],
+        "def": "Gopass:init()",
+        "parameters": [
+          " * None",
+          ""
+        ]
+      },
+      {
+        "doc": "Shows the gopass entry chooser, or reopens the last viewed card if it was\nshown within reopenCardSeconds.\n\nParameters:\n * None\n\nReturns:\n * None",
+        "stripped_doc": [
+          "Shows the gopass entry chooser, or reopens the last viewed card if it was",
+          "shown within reopenCardSeconds.",
+          ""
+        ],
+        "name": "show",
+        "desc": "Shows the gopass entry chooser, or reopens the last viewed card if it was",
+        "notes": [],
+        "signature": "Gopass:show()",
+        "type": "Method",
+        "returns": [
+          " * None"
+        ],
+        "def": "Gopass:show()",
+        "parameters": [
+          " * None",
+          ""
+        ]
+      },
+      {
+        "doc": "Binds hotkeys to Spoon actions.\n\nSupported mapping keys:\n * show - Show the entry chooser, or reopen the last viewed card.\n\nParameters:\n * mapping - A table mapping action names to hotkey definitions, e.g.\n   `{ show = {{\"cmd\", \"alt\"}, \"p\", message = \"Gopass\"} }`.\n\nReturns:\n * The Gopass object",
+        "stripped_doc": [
+          "Binds hotkeys to Spoon actions.",
+          "",
+          "Supported mapping keys:",
+          " * show - Show the entry chooser, or reopen the last viewed card.",
+          ""
+        ],
+        "name": "bindHotkeys",
+        "desc": "Binds hotkeys to Spoon actions.",
+        "notes": [],
+        "signature": "Gopass:bindHotkeys(mapping)",
+        "type": "Method",
+        "returns": [
+          " * The Gopass object"
+        ],
+        "def": "Gopass:bindHotkeys(mapping)",
+        "parameters": [
+          " * mapping - A table mapping action names to hotkey definitions, e.g.",
+          "   `{ show = {{\"cmd\", \"alt\"}, \"p\", message = \"Gopass\"} }`.",
+          ""
+        ]
+      },
+      {
+        "doc": "Applies optional configuration, prepares chooser UI, and runs the optional\nhealth check. If bindHotkeys() has not been called, defaultHotkeys are bound.\n\nParameters:\n * config - An optional table of Gopass settings to apply before starting.\n   Supported keys are the documented public variables, plus `hotkeys` as an\n   alias for `defaultHotkeys`.\n\nReturns:\n * The Gopass object",
+        "stripped_doc": [
+          "Applies optional configuration, prepares chooser UI, and runs the optional",
+          "health check. If bindHotkeys() has not been called, defaultHotkeys are bound.",
+          ""
+        ],
+        "name": "start",
+        "desc": "Applies optional configuration, prepares chooser UI, and runs the optional",
+        "notes": [],
+        "signature": "Gopass:start([config])",
+        "type": "Method",
+        "returns": [
+          " * The Gopass object"
+        ],
+        "def": "Gopass:start([config])",
+        "parameters": [
+          " * config - An optional table of Gopass settings to apply before starting.",
+          "   Supported keys are the documented public variables, plus `hotkeys` as an",
+          "   alias for `defaultHotkeys`.",
+          ""
+        ]
+      },
+      {
+        "doc": "Stops active tasks, timers, watchers, and chooser UI owned by the Spoon.\n\nParameters:\n * None\n\nReturns:\n * The Gopass object",
+        "stripped_doc": [
+          "Stops active tasks, timers, watchers, and chooser UI owned by the Spoon.",
+          ""
+        ],
+        "name": "stop",
+        "desc": "Stops active tasks, timers, watchers, and chooser UI owned by the Spoon.",
+        "notes": [],
+        "signature": "Gopass:stop()",
+        "type": "Method",
+        "returns": [
+          " * The Gopass object"
+        ],
+        "def": "Gopass:stop()",
+        "parameters": [
+          " * None",
+          ""
+        ]
+      }
+    ],
+    "Command": [],
+    "items": [
+      {
+        "doc": "Default hotkey mapping used by start() when bindHotkeys() has not been called.\nMaps the show action to Ctrl+Alt+Cmd+P.",
+        "stripped_doc": [
+          "Default hotkey mapping used by start() when bindHotkeys() has not been called.",
+          "Maps the show action to Ctrl+Alt+Cmd+P."
+        ],
+        "name": "defaultHotkeys",
+        "desc": "Default hotkey mapping used by start() when bindHotkeys() has not been called.",
+        "notes": [],
+        "signature": "Gopass.defaultHotkeys",
+        "type": "Variable",
+        "returns": [],
+        "def": "Gopass.defaultHotkeys",
+        "parameters": []
+      },
+      {
+        "doc": "Executable name or path for gopass. The command is launched via /usr/bin/env.",
+        "stripped_doc": [
+          "Executable name or path for gopass. The command is launched via /usr/bin/env."
+        ],
+        "name": "gopassBin",
+        "desc": "Executable name or path for gopass. The command is launched via /usr/bin/env.",
+        "notes": [],
+        "signature": "Gopass.gopassBin",
+        "type": "Variable",
+        "returns": [],
+        "def": "Gopass.gopassBin",
+        "parameters": []
+      },
+      {
+        "doc": "Argument list used to fetch password-store entry names.",
+        "stripped_doc": [
+          "Argument list used to fetch password-store entry names."
+        ],
+        "name": "listArgs",
+        "desc": "Argument list used to fetch password-store entry names.",
+        "notes": [],
+        "signature": "Gopass.listArgs",
+        "type": "Variable",
+        "returns": [],
+        "def": "Gopass.listArgs",
+        "parameters": []
+      },
+      {
+        "doc": "Argument prefix used before the selected entry name when decrypting an entry.",
+        "stripped_doc": [
+          "Argument prefix used before the selected entry name when decrypting an entry."
+        ],
+        "name": "showArgsPrefix",
+        "desc": "Argument prefix used before the selected entry name when decrypting an entry.",
+        "notes": [],
+        "signature": "Gopass.showArgsPrefix",
+        "type": "Variable",
+        "returns": [],
+        "def": "Gopass.showArgsPrefix",
+        "parameters": []
+      },
+      {
+        "doc": "Timeout, in seconds, for listing entries. Set to 0 or nil to disable.",
+        "stripped_doc": [
+          "Timeout, in seconds, for listing entries. Set to 0 or nil to disable."
+        ],
+        "name": "listTimeoutSeconds",
+        "desc": "Timeout, in seconds, for listing entries. Set to 0 or nil to disable.",
+        "notes": [],
+        "signature": "Gopass.listTimeoutSeconds",
+        "type": "Variable",
+        "returns": [],
+        "def": "Gopass.listTimeoutSeconds",
+        "parameters": []
+      },
+      {
+        "doc": "Timeout, in seconds, for decrypting an entry. Set to 0 or nil to disable.",
+        "stripped_doc": [
+          "Timeout, in seconds, for decrypting an entry. Set to 0 or nil to disable."
+        ],
+        "name": "showTimeoutSeconds",
+        "desc": "Timeout, in seconds, for decrypting an entry. Set to 0 or nil to disable.",
+        "notes": [],
+        "signature": "Gopass.showTimeoutSeconds",
+        "type": "Variable",
+        "returns": [],
+        "def": "Gopass.showTimeoutSeconds",
+        "parameters": []
+      },
+      {
+        "doc": "Number of times to retry gopass commands that time out.",
+        "stripped_doc": [
+          "Number of times to retry gopass commands that time out."
+        ],
+        "name": "gopassRetryOnTimeout",
+        "desc": "Number of times to retry gopass commands that time out.",
+        "notes": [],
+        "signature": "Gopass.gopassRetryOnTimeout",
+        "type": "Variable",
+        "returns": [],
+        "def": "Gopass.gopassRetryOnTimeout",
+        "parameters": []
+      },
+      {
+        "doc": "Additional PATH entries passed to gopass and gpg subprocesses. Useful because\nGUI-launched Hammerspoon can inherit a minimal launchd PATH.",
+        "stripped_doc": [
+          "Additional PATH entries passed to gopass and gpg subprocesses. Useful because",
+          "GUI-launched Hammerspoon can inherit a minimal launchd PATH."
+        ],
+        "name": "extraPathEntries",
+        "desc": "Additional PATH entries passed to gopass and gpg subprocesses. Useful because",
+        "notes": [],
+        "signature": "Gopass.extraPathEntries",
+        "type": "Variable",
+        "returns": [],
+        "def": "Gopass.extraPathEntries",
+        "parameters": []
+      },
+      {
+        "doc": "Extra environment variables passed to gopass and gpg subprocesses.\nExample: `{ GOPASS_HOMEDIR = \"/Users/you/.local/share/gopass\" }`.",
+        "stripped_doc": [
+          "Extra environment variables passed to gopass and gpg subprocesses.",
+          "Example: `{ GOPASS_HOMEDIR = \"/Users/you/.local/share/gopass\" }`."
+        ],
+        "name": "extraEnv",
+        "desc": "Extra environment variables passed to gopass and gpg subprocesses.",
+        "notes": [],
+        "signature": "Gopass.extraEnv",
+        "type": "Variable",
+        "returns": [],
+        "def": "Gopass.extraEnv",
+        "parameters": []
+      },
+      {
+        "doc": "Application name to focus while gopass waits for passphrase entry.",
+        "stripped_doc": [
+          "Application name to focus while gopass waits for passphrase entry."
+        ],
+        "name": "pinentryAppName",
+        "desc": "Application name to focus while gopass waits for passphrase entry.",
+        "notes": [],
+        "signature": "Gopass.pinentryAppName",
+        "type": "Variable",
+        "returns": [],
+        "def": "Gopass.pinentryAppName",
+        "parameters": []
+      },
+      {
+        "doc": "Number of seconds to keep looking for pinentryAppName after decryption starts.",
+        "stripped_doc": [
+          "Number of seconds to keep looking for pinentryAppName after decryption starts."
+        ],
+        "name": "pinentryFocusAssistSeconds",
+        "desc": "Number of seconds to keep looking for pinentryAppName after decryption starts.",
+        "notes": [],
+        "signature": "Gopass.pinentryFocusAssistSeconds",
+        "type": "Variable",
+        "returns": [],
+        "def": "Gopass.pinentryFocusAssistSeconds",
+        "parameters": []
+      },
+      {
+        "doc": "Polling interval, in seconds, used while focusing pinentryAppName.",
+        "stripped_doc": [
+          "Polling interval, in seconds, used while focusing pinentryAppName."
+        ],
+        "name": "pinentryFocusAssistInterval",
+        "desc": "Polling interval, in seconds, used while focusing pinentryAppName.",
+        "notes": [],
+        "signature": "Gopass.pinentryFocusAssistInterval",
+        "type": "Variable",
+        "returns": [],
+        "def": "Gopass.pinentryFocusAssistInterval",
+        "parameters": []
+      },
+      {
+        "doc": "Maximum number of rows shown in the entry chooser.",
+        "stripped_doc": [
+          "Maximum number of rows shown in the entry chooser."
+        ],
+        "name": "maxEntryRows",
+        "desc": "Maximum number of rows shown in the entry chooser.",
+        "notes": [],
+        "signature": "Gopass.maxEntryRows",
+        "type": "Variable",
+        "returns": [],
+        "def": "Gopass.maxEntryRows",
+        "parameters": []
+      },
+      {
+        "doc": "Number of seconds to cache the entry list. Set to 0 or nil to always refresh.",
+        "stripped_doc": [
+          "Number of seconds to cache the entry list. Set to 0 or nil to always refresh."
+        ],
+        "name": "cacheEntriesSeconds",
+        "desc": "Number of seconds to cache the entry list. Set to 0 or nil to always refresh.",
+        "notes": [],
+        "signature": "Gopass.cacheEntriesSeconds",
+        "type": "Variable",
+        "returns": [],
+        "def": "Gopass.cacheEntriesSeconds",
+        "parameters": []
+      },
+      {
+        "doc": "Whether to open the Hammerspoon console when a gopass/gpg command fails.",
+        "stripped_doc": [
+          "Whether to open the Hammerspoon console when a gopass/gpg command fails."
+        ],
+        "name": "openConsoleOnError",
+        "desc": "Whether to open the Hammerspoon console when a gopass/gpg command fails.",
+        "notes": [],
+        "signature": "Gopass.openConsoleOnError",
+        "type": "Variable",
+        "returns": [],
+        "def": "Gopass.openConsoleOnError",
+        "parameters": []
+      },
+      {
+        "doc": "Whether start() should run lightweight gopass and gpg availability checks.",
+        "stripped_doc": [
+          "Whether start() should run lightweight gopass and gpg availability checks."
+        ],
+        "name": "healthCheckOnStart",
+        "desc": "Whether start() should run lightweight gopass and gpg availability checks.",
+        "notes": [],
+        "signature": "Gopass.healthCheckOnStart",
+        "type": "Variable",
+        "returns": [],
+        "def": "Gopass.healthCheckOnStart",
+        "parameters": []
+      },
+      {
+        "doc": "Timeout, in seconds, for each startup health-check command.",
+        "stripped_doc": [
+          "Timeout, in seconds, for each startup health-check command."
+        ],
+        "name": "healthCheckTimeoutSeconds",
+        "desc": "Timeout, in seconds, for each startup health-check command.",
+        "notes": [],
+        "signature": "Gopass.healthCheckTimeoutSeconds",
+        "type": "Variable",
+        "returns": [],
+        "def": "Gopass.healthCheckTimeoutSeconds",
+        "parameters": []
+      },
+      {
+        "doc": "Seconds before clearing the clipboard if it still contains the copied secret.\nSet to nil to disable automatic clearing.",
+        "stripped_doc": [
+          "Seconds before clearing the clipboard if it still contains the copied secret.",
+          "Set to nil to disable automatic clearing."
+        ],
+        "name": "clipboardAutoClearSeconds",
+        "desc": "Seconds before clearing the clipboard if it still contains the copied secret.",
+        "notes": [],
+        "signature": "Gopass.clipboardAutoClearSeconds",
+        "type": "Variable",
+        "returns": [],
+        "def": "Gopass.clipboardAutoClearSeconds",
+        "parameters": []
+      },
+      {
+        "doc": "When true, selected non-URL fields are typed into the previously focused\nwindow. When false, selected fields are copied to the clipboard. URL fields\nalways open as URLs.",
+        "stripped_doc": [
+          "When true, selected non-URL fields are typed into the previously focused",
+          "window. When false, selected fields are copied to the clipboard. URL fields",
+          "always open as URLs."
+        ],
+        "name": "pasteIntoField",
+        "desc": "When true, selected non-URL fields are typed into the previously focused",
+        "notes": [],
+        "signature": "Gopass.pasteIntoField",
+        "type": "Variable",
+        "returns": [],
+        "def": "Gopass.pasteIntoField",
+        "parameters": []
+      },
+      {
+        "doc": "Delay, in seconds, between refocusing the target window and typing a value.",
+        "stripped_doc": [
+          "Delay, in seconds, between refocusing the target window and typing a value."
+        ],
+        "name": "pasteDelaySeconds",
+        "desc": "Delay, in seconds, between refocusing the target window and typing a value.",
+        "notes": [],
+        "signature": "Gopass.pasteDelaySeconds",
+        "type": "Variable",
+        "returns": [],
+        "def": "Gopass.pasteDelaySeconds",
+        "parameters": []
+      },
+      {
+        "doc": "Time window, in seconds, during which show() reopens the last viewed entry\ncard instead of showing the full entry list.",
+        "stripped_doc": [
+          "Time window, in seconds, during which show() reopens the last viewed entry",
+          "card instead of showing the full entry list."
+        ],
+        "name": "reopenCardSeconds",
+        "desc": "Time window, in seconds, during which show() reopens the last viewed entry",
+        "notes": [],
+        "signature": "Gopass.reopenCardSeconds",
+        "type": "Variable",
+        "returns": [],
+        "def": "Gopass.reopenCardSeconds",
+        "parameters": []
+      },
+      {
+        "doc": "Prepares the Spoon. Called automatically by hs.loadSpoon().\n\nThis method does not start tasks, timers, watchers, or bind hotkeys; call\nstart() to activate the Spoon.\n\nParameters:\n * None\n\nReturns:\n * The Gopass object",
+        "stripped_doc": [
+          "Prepares the Spoon. Called automatically by hs.loadSpoon().",
+          "",
+          "This method does not start tasks, timers, watchers, or bind hotkeys; call",
+          "start() to activate the Spoon.",
+          ""
+        ],
+        "name": "init",
+        "desc": "Prepares the Spoon. Called automatically by hs.loadSpoon().",
+        "notes": [],
+        "signature": "Gopass:init()",
+        "type": "Method",
+        "returns": [
+          " * The Gopass object"
+        ],
+        "def": "Gopass:init()",
+        "parameters": [
+          " * None",
+          ""
+        ]
+      },
+      {
+        "doc": "Shows the gopass entry chooser, or reopens the last viewed card if it was\nshown within reopenCardSeconds.\n\nParameters:\n * None\n\nReturns:\n * None",
+        "stripped_doc": [
+          "Shows the gopass entry chooser, or reopens the last viewed card if it was",
+          "shown within reopenCardSeconds.",
+          ""
+        ],
+        "name": "show",
+        "desc": "Shows the gopass entry chooser, or reopens the last viewed card if it was",
+        "notes": [],
+        "signature": "Gopass:show()",
+        "type": "Method",
+        "returns": [
+          " * None"
+        ],
+        "def": "Gopass:show()",
+        "parameters": [
+          " * None",
+          ""
+        ]
+      },
+      {
+        "doc": "Binds hotkeys to Spoon actions.\n\nSupported mapping keys:\n * show - Show the entry chooser, or reopen the last viewed card.\n\nParameters:\n * mapping - A table mapping action names to hotkey definitions, e.g.\n   `{ show = {{\"cmd\", \"alt\"}, \"p\", message = \"Gopass\"} }`.\n\nReturns:\n * The Gopass object",
+        "stripped_doc": [
+          "Binds hotkeys to Spoon actions.",
+          "",
+          "Supported mapping keys:",
+          " * show - Show the entry chooser, or reopen the last viewed card.",
+          ""
+        ],
+        "name": "bindHotkeys",
+        "desc": "Binds hotkeys to Spoon actions.",
+        "notes": [],
+        "signature": "Gopass:bindHotkeys(mapping)",
+        "type": "Method",
+        "returns": [
+          " * The Gopass object"
+        ],
+        "def": "Gopass:bindHotkeys(mapping)",
+        "parameters": [
+          " * mapping - A table mapping action names to hotkey definitions, e.g.",
+          "   `{ show = {{\"cmd\", \"alt\"}, \"p\", message = \"Gopass\"} }`.",
+          ""
+        ]
+      },
+      {
+        "doc": "Applies optional configuration, prepares chooser UI, and runs the optional\nhealth check. If bindHotkeys() has not been called, defaultHotkeys are bound.\n\nParameters:\n * config - An optional table of Gopass settings to apply before starting.\n   Supported keys are the documented public variables, plus `hotkeys` as an\n   alias for `defaultHotkeys`.\n\nReturns:\n * The Gopass object",
+        "stripped_doc": [
+          "Applies optional configuration, prepares chooser UI, and runs the optional",
+          "health check. If bindHotkeys() has not been called, defaultHotkeys are bound.",
+          ""
+        ],
+        "name": "start",
+        "desc": "Applies optional configuration, prepares chooser UI, and runs the optional",
+        "notes": [],
+        "signature": "Gopass:start([config])",
+        "type": "Method",
+        "returns": [
+          " * The Gopass object"
+        ],
+        "def": "Gopass:start([config])",
+        "parameters": [
+          " * config - An optional table of Gopass settings to apply before starting.",
+          "   Supported keys are the documented public variables, plus `hotkeys` as an",
+          "   alias for `defaultHotkeys`.",
+          ""
+        ]
+      },
+      {
+        "doc": "Stops active tasks, timers, watchers, and chooser UI owned by the Spoon.\n\nParameters:\n * None\n\nReturns:\n * The Gopass object",
+        "stripped_doc": [
+          "Stops active tasks, timers, watchers, and chooser UI owned by the Spoon.",
+          ""
+        ],
+        "name": "stop",
+        "desc": "Stops active tasks, timers, watchers, and chooser UI owned by the Spoon.",
+        "notes": [],
+        "signature": "Gopass:stop()",
+        "type": "Method",
+        "returns": [
+          " * The Gopass object"
+        ],
+        "def": "Gopass:stop()",
+        "parameters": [
+          " * None",
+          ""
+        ]
+      }
+    ],
+    "name": "Gopass"
+  }
+]
