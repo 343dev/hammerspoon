@@ -1,0 +1,280 @@
+[
+  {
+    "Constant" : [
+
+    ],
+    "submodules" : [
+
+    ],
+    "Function" : [
+
+    ],
+    "Variable" : [
+      {
+        "doc" : "The keyboard layout name to switch to when the left Command key is tapped\non its own. Set directly or pass as leftLayout to start().\nSee hs.keycodes.layouts().",
+        "stripped_doc" : [
+          "The keyboard layout name to switch to when the left Command key is tapped",
+          "on its own. Set directly or pass as leftLayout to start().",
+          "See hs.keycodes.layouts()."
+        ],
+        "name" : "leftLayout",
+        "desc" : "The keyboard layout name to switch to when the left Command key is tapped",
+        "notes" : [
+
+        ],
+        "signature" : "CMDLayoutSwitcher.leftLayout",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "def" : "CMDLayoutSwitcher.leftLayout",
+        "parameters" : [
+
+        ]
+      },
+      {
+        "doc" : "The keyboard layout name to switch to when the right Command key is tapped\non its own. Set directly or pass as rightLayout to start().\nSee hs.keycodes.layouts().",
+        "stripped_doc" : [
+          "The keyboard layout name to switch to when the right Command key is tapped",
+          "on its own. Set directly or pass as rightLayout to start().",
+          "See hs.keycodes.layouts()."
+        ],
+        "name" : "rightLayout",
+        "desc" : "The keyboard layout name to switch to when the right Command key is tapped",
+        "notes" : [
+
+        ],
+        "signature" : "CMDLayoutSwitcher.rightLayout",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "def" : "CMDLayoutSwitcher.rightLayout",
+        "parameters" : [
+
+        ]
+      }
+    ],
+    "stripped_doc" : [
+
+    ],
+    "type" : "Module",
+    "Deprecated" : [
+
+    ],
+    "desc" : "Select the keyboard layout based on a lone tap of a Command key.",
+    "Constructor" : [
+
+    ],
+    "Field" : [
+
+    ],
+    "Method" : [
+      {
+        "doc" : "Prepares the Spoon. Called automatically by hs.loadSpoon().\n\nDoes not start any watchers (per Spoon conventions); use start() to begin.\n\nParameters:\n * None\n\nReturns:\n * The CMDLayoutSwitcher object",
+        "stripped_doc" : [
+          "Prepares the Spoon. Called automatically by hs.loadSpoon().",
+          "",
+          "Does not start any watchers (per Spoon conventions); use start() to begin.",
+          ""
+        ],
+        "name" : "init",
+        "desc" : "Prepares the Spoon. Called automatically by hs.loadSpoon().",
+        "notes" : [
+
+        ],
+        "signature" : "CMDLayoutSwitcher:init()",
+        "type" : "Method",
+        "returns" : [
+          " * The CMDLayoutSwitcher object"
+        ],
+        "def" : "CMDLayoutSwitcher:init()",
+        "parameters" : [
+          " * None",
+          ""
+        ]
+      },
+      {
+        "doc" : "Configures the target layouts, starts observing Command keys, and switches\nlayout on a lone Command tap.\n\nA tap counts as \"lone\" only when Command is pressed and released with no other\nkey in between. Command+key combinations (CMD+A, …) are ignored. Safe to call\nmultiple times; only one observer is ever active. If called again while\nrunning, a valid config updates the layouts immediately without restarting\nthe observer.\n\nParameters:\n * config - An optional table with leftLayout and\/or rightLayout string\n   values. These override CMDLayoutSwitcher.leftLayout and\n   CMDLayoutSwitcher.rightLayout for this and future starts.\n\nReturns:\n * The CMDLayoutSwitcher object",
+        "stripped_doc" : [
+          "Configures the target layouts, starts observing Command keys, and switches",
+          "layout on a lone Command tap.",
+          "",
+          "A tap counts as \"lone\" only when Command is pressed and released with no other",
+          "key in between. Command+key combinations (CMD+A, …) are ignored. Safe to call",
+          "multiple times; only one observer is ever active. If called again while",
+          "running, a valid config updates the layouts immediately without restarting",
+          "the observer.",
+          ""
+        ],
+        "name" : "start",
+        "desc" : "Configures the target layouts, starts observing Command keys, and switches",
+        "notes" : [
+
+        ],
+        "signature" : "CMDLayoutSwitcher:start([config])",
+        "type" : "Method",
+        "returns" : [
+          " * The CMDLayoutSwitcher object"
+        ],
+        "def" : "CMDLayoutSwitcher:start([config])",
+        "parameters" : [
+          " * config - An optional table with leftLayout and\/or rightLayout string",
+          "   values. These override CMDLayoutSwitcher.leftLayout and",
+          "   CMDLayoutSwitcher.rightLayout for this and future starts.",
+          ""
+        ]
+      },
+      {
+        "doc" : "Stops observing Command keys.\n\nParameters:\n * None\n\nReturns:\n * The CMDLayoutSwitcher object",
+        "stripped_doc" : [
+          "Stops observing Command keys.",
+          ""
+        ],
+        "name" : "stop",
+        "desc" : "Stops observing Command keys.",
+        "notes" : [
+
+        ],
+        "signature" : "CMDLayoutSwitcher:stop()",
+        "type" : "Method",
+        "returns" : [
+          " * The CMDLayoutSwitcher object"
+        ],
+        "def" : "CMDLayoutSwitcher:stop()",
+        "parameters" : [
+          " * None",
+          ""
+        ]
+      }
+    ],
+    "Command" : [
+
+    ],
+    "items" : [
+      {
+        "doc" : "The keyboard layout name to switch to when the left Command key is tapped\non its own. Set directly or pass as leftLayout to start().\nSee hs.keycodes.layouts().",
+        "stripped_doc" : [
+          "The keyboard layout name to switch to when the left Command key is tapped",
+          "on its own. Set directly or pass as leftLayout to start().",
+          "See hs.keycodes.layouts()."
+        ],
+        "name" : "leftLayout",
+        "desc" : "The keyboard layout name to switch to when the left Command key is tapped",
+        "notes" : [
+
+        ],
+        "signature" : "CMDLayoutSwitcher.leftLayout",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "def" : "CMDLayoutSwitcher.leftLayout",
+        "parameters" : [
+
+        ]
+      },
+      {
+        "doc" : "The keyboard layout name to switch to when the right Command key is tapped\non its own. Set directly or pass as rightLayout to start().\nSee hs.keycodes.layouts().",
+        "stripped_doc" : [
+          "The keyboard layout name to switch to when the right Command key is tapped",
+          "on its own. Set directly or pass as rightLayout to start().",
+          "See hs.keycodes.layouts()."
+        ],
+        "name" : "rightLayout",
+        "desc" : "The keyboard layout name to switch to when the right Command key is tapped",
+        "notes" : [
+
+        ],
+        "signature" : "CMDLayoutSwitcher.rightLayout",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "def" : "CMDLayoutSwitcher.rightLayout",
+        "parameters" : [
+
+        ]
+      },
+      {
+        "doc" : "Prepares the Spoon. Called automatically by hs.loadSpoon().\n\nDoes not start any watchers (per Spoon conventions); use start() to begin.\n\nParameters:\n * None\n\nReturns:\n * The CMDLayoutSwitcher object",
+        "stripped_doc" : [
+          "Prepares the Spoon. Called automatically by hs.loadSpoon().",
+          "",
+          "Does not start any watchers (per Spoon conventions); use start() to begin.",
+          ""
+        ],
+        "name" : "init",
+        "desc" : "Prepares the Spoon. Called automatically by hs.loadSpoon().",
+        "notes" : [
+
+        ],
+        "signature" : "CMDLayoutSwitcher:init()",
+        "type" : "Method",
+        "returns" : [
+          " * The CMDLayoutSwitcher object"
+        ],
+        "def" : "CMDLayoutSwitcher:init()",
+        "parameters" : [
+          " * None",
+          ""
+        ]
+      },
+      {
+        "doc" : "Configures the target layouts, starts observing Command keys, and switches\nlayout on a lone Command tap.\n\nA tap counts as \"lone\" only when Command is pressed and released with no other\nkey in between. Command+key combinations (CMD+A, …) are ignored. Safe to call\nmultiple times; only one observer is ever active. If called again while\nrunning, a valid config updates the layouts immediately without restarting\nthe observer.\n\nParameters:\n * config - An optional table with leftLayout and\/or rightLayout string\n   values. These override CMDLayoutSwitcher.leftLayout and\n   CMDLayoutSwitcher.rightLayout for this and future starts.\n\nReturns:\n * The CMDLayoutSwitcher object",
+        "stripped_doc" : [
+          "Configures the target layouts, starts observing Command keys, and switches",
+          "layout on a lone Command tap.",
+          "",
+          "A tap counts as \"lone\" only when Command is pressed and released with no other",
+          "key in between. Command+key combinations (CMD+A, …) are ignored. Safe to call",
+          "multiple times; only one observer is ever active. If called again while",
+          "running, a valid config updates the layouts immediately without restarting",
+          "the observer.",
+          ""
+        ],
+        "name" : "start",
+        "desc" : "Configures the target layouts, starts observing Command keys, and switches",
+        "notes" : [
+
+        ],
+        "signature" : "CMDLayoutSwitcher:start([config])",
+        "type" : "Method",
+        "returns" : [
+          " * The CMDLayoutSwitcher object"
+        ],
+        "def" : "CMDLayoutSwitcher:start([config])",
+        "parameters" : [
+          " * config - An optional table with leftLayout and\/or rightLayout string",
+          "   values. These override CMDLayoutSwitcher.leftLayout and",
+          "   CMDLayoutSwitcher.rightLayout for this and future starts.",
+          ""
+        ]
+      },
+      {
+        "doc" : "Stops observing Command keys.\n\nParameters:\n * None\n\nReturns:\n * The CMDLayoutSwitcher object",
+        "stripped_doc" : [
+          "Stops observing Command keys.",
+          ""
+        ],
+        "name" : "stop",
+        "desc" : "Stops observing Command keys.",
+        "notes" : [
+
+        ],
+        "signature" : "CMDLayoutSwitcher:stop()",
+        "type" : "Method",
+        "returns" : [
+          " * The CMDLayoutSwitcher object"
+        ],
+        "def" : "CMDLayoutSwitcher:stop()",
+        "parameters" : [
+          " * None",
+          ""
+        ]
+      }
+    ],
+    "doc" : "Select the keyboard layout based on a lone tap of a Command key.\n\nLeft Command tap  (press & release without any other key) -> leftLayout\nRight Command tap (press & release without any other key) -> rightLayout\n\nCommand-key combinations such as CMD+A, CMD+C, CMD+Tab, CMD+Shift+3, etc.\ndo not switch the layout — the tap only counts when Command is pressed and\nreleased on its own.\n\nSwitching is purely event-driven (no timers \/ intervals) and every event is\nobserved read-only and passed through unchanged, so all normal Command usage\nkeeps working.\n\nDownload: https:\/\/github.com\/343dev\/spoons",
+    "name" : "CMDLayoutSwitcher"
+  }
+]
