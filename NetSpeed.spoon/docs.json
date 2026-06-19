@@ -1,0 +1,332 @@
+[
+  {
+    "Constant" : [
+
+    ],
+    "submodules" : [
+
+    ],
+    "Function" : [
+
+    ],
+    "Variable" : [
+      {
+        "doc" : "Primary network interface to monitor. Default: \"en0\".",
+        "desc" : "Primary network interface to monitor. Default: \"en0\".",
+        "def" : "NetSpeed.interface",
+        "stripped_doc" : [
+          "Primary network interface to monitor. Default: \"en0\"."
+        ],
+        "notes" : [
+
+        ],
+        "signature" : "NetSpeed.interface",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "interface",
+        "parameters" : [
+
+        ]
+      },
+      {
+        "doc" : "Optional fallback network interface used when `interface` is unavailable. Set to\n`nil` to disable fallback. Default: nil.",
+        "desc" : "Optional fallback network interface used when `interface` is unavailable. Set to",
+        "def" : "NetSpeed.fallbackInterface",
+        "stripped_doc" : [
+          "Optional fallback network interface used when `interface` is unavailable. Set to",
+          "`nil` to disable fallback. Default: nil."
+        ],
+        "notes" : [
+
+        ],
+        "signature" : "NetSpeed.fallbackInterface",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "fallbackInterface",
+        "parameters" : [
+
+        ]
+      },
+      {
+        "doc" : "Interval, in seconds, between menubar updates while the Spoon is running.",
+        "desc" : "Interval, in seconds, between menubar updates while the Spoon is running.",
+        "def" : "NetSpeed.updateInterval",
+        "stripped_doc" : [
+          "Interval, in seconds, between menubar updates while the Spoon is running."
+        ],
+        "notes" : [
+
+        ],
+        "signature" : "NetSpeed.updateInterval",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "updateInterval",
+        "parameters" : [
+
+        ]
+      },
+      {
+        "doc" : "Logger object used within the Spoon.",
+        "desc" : "Logger object used within the Spoon.",
+        "def" : "NetSpeed.logger",
+        "stripped_doc" : [
+          "Logger object used within the Spoon."
+        ],
+        "notes" : [
+
+        ],
+        "signature" : "NetSpeed.logger",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "logger",
+        "parameters" : [
+
+        ]
+      }
+    ],
+    "stripped_doc" : [
+
+    ],
+    "Deprecated" : [
+
+    ],
+    "desc" : "Monitor network interface throughput and display upload\/download speed in the menubar.",
+    "type" : "Module",
+    "Constructor" : [
+
+    ],
+    "doc" : "Monitor network interface throughput and display upload\/download speed in the menubar.\n\nNetSpeed reads byte counters from macOS `netstat` for a configurable network\ninterface and renders a compact two-line menubar icon.\n\nUsage:\n```lua\nhs.loadSpoon(\"NetSpeed\")\nspoon.NetSpeed:start()\n```\n\nConfigure the interface before starting if needed:\n```lua\nspoon.NetSpeed.interface = \"en0\"\nspoon.NetSpeed.fallbackInterface = \"utun0\"\nspoon.NetSpeed.updateInterval = 1\nspoon.NetSpeed:start()\n```\n\nDownload: https:\/\/github.com\/343dev\/spoons",
+    "Method" : [
+      {
+        "doc" : "Start monitoring network speed\n\nParameters:\n * None\n\nReturns:\n * The NetSpeed object",
+        "desc" : "Start monitoring network speed",
+        "def" : "NetSpeed:start()",
+        "stripped_doc" : [
+          "Start monitoring network speed",
+          ""
+        ],
+        "notes" : [
+
+        ],
+        "signature" : "NetSpeed:start()",
+        "type" : "Method",
+        "returns" : [
+          " * The NetSpeed object"
+        ],
+        "name" : "start",
+        "parameters" : [
+          " * None",
+          ""
+        ]
+      },
+      {
+        "doc" : "Stop monitoring network speed\n\nParameters:\n * None\n\nReturns:\n * The NetSpeed object",
+        "desc" : "Stop monitoring network speed",
+        "def" : "NetSpeed:stop()",
+        "stripped_doc" : [
+          "Stop monitoring network speed",
+          ""
+        ],
+        "notes" : [
+
+        ],
+        "signature" : "NetSpeed:stop()",
+        "type" : "Method",
+        "returns" : [
+          " * The NetSpeed object"
+        ],
+        "name" : "stop",
+        "parameters" : [
+          " * None",
+          ""
+        ]
+      },
+      {
+        "doc" : "Set the primary network interface to monitor\n\nParameters:\n * interface - Network interface name (e.g., \"en0\", \"utun7\")\n\nReturns:\n * The NetSpeed object",
+        "desc" : "Set the primary network interface to monitor",
+        "def" : "NetSpeed:setInterface(interface)",
+        "stripped_doc" : [
+          "Set the primary network interface to monitor",
+          ""
+        ],
+        "notes" : [
+
+        ],
+        "signature" : "NetSpeed:setInterface(interface)",
+        "type" : "Method",
+        "returns" : [
+          " * The NetSpeed object"
+        ],
+        "name" : "setInterface",
+        "parameters" : [
+          " * interface - Network interface name (e.g., \"en0\", \"utun7\")",
+          ""
+        ]
+      }
+    ],
+    "Command" : [
+
+    ],
+    "items" : [
+      {
+        "doc" : "Optional fallback network interface used when `interface` is unavailable. Set to\n`nil` to disable fallback. Default: nil.",
+        "desc" : "Optional fallback network interface used when `interface` is unavailable. Set to",
+        "def" : "NetSpeed.fallbackInterface",
+        "stripped_doc" : [
+          "Optional fallback network interface used when `interface` is unavailable. Set to",
+          "`nil` to disable fallback. Default: nil."
+        ],
+        "notes" : [
+
+        ],
+        "signature" : "NetSpeed.fallbackInterface",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "fallbackInterface",
+        "parameters" : [
+
+        ]
+      },
+      {
+        "doc" : "Primary network interface to monitor. Default: \"en0\".",
+        "desc" : "Primary network interface to monitor. Default: \"en0\".",
+        "def" : "NetSpeed.interface",
+        "stripped_doc" : [
+          "Primary network interface to monitor. Default: \"en0\"."
+        ],
+        "notes" : [
+
+        ],
+        "signature" : "NetSpeed.interface",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "interface",
+        "parameters" : [
+
+        ]
+      },
+      {
+        "doc" : "Logger object used within the Spoon.",
+        "desc" : "Logger object used within the Spoon.",
+        "def" : "NetSpeed.logger",
+        "stripped_doc" : [
+          "Logger object used within the Spoon."
+        ],
+        "notes" : [
+
+        ],
+        "signature" : "NetSpeed.logger",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "logger",
+        "parameters" : [
+
+        ]
+      },
+      {
+        "doc" : "Interval, in seconds, between menubar updates while the Spoon is running.",
+        "desc" : "Interval, in seconds, between menubar updates while the Spoon is running.",
+        "def" : "NetSpeed.updateInterval",
+        "stripped_doc" : [
+          "Interval, in seconds, between menubar updates while the Spoon is running."
+        ],
+        "notes" : [
+
+        ],
+        "signature" : "NetSpeed.updateInterval",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "updateInterval",
+        "parameters" : [
+
+        ]
+      },
+      {
+        "doc" : "Set the primary network interface to monitor\n\nParameters:\n * interface - Network interface name (e.g., \"en0\", \"utun7\")\n\nReturns:\n * The NetSpeed object",
+        "desc" : "Set the primary network interface to monitor",
+        "def" : "NetSpeed:setInterface(interface)",
+        "stripped_doc" : [
+          "Set the primary network interface to monitor",
+          ""
+        ],
+        "notes" : [
+
+        ],
+        "signature" : "NetSpeed:setInterface(interface)",
+        "type" : "Method",
+        "returns" : [
+          " * The NetSpeed object"
+        ],
+        "name" : "setInterface",
+        "parameters" : [
+          " * interface - Network interface name (e.g., \"en0\", \"utun7\")",
+          ""
+        ]
+      },
+      {
+        "doc" : "Start monitoring network speed\n\nParameters:\n * None\n\nReturns:\n * The NetSpeed object",
+        "desc" : "Start monitoring network speed",
+        "def" : "NetSpeed:start()",
+        "stripped_doc" : [
+          "Start monitoring network speed",
+          ""
+        ],
+        "notes" : [
+
+        ],
+        "signature" : "NetSpeed:start()",
+        "type" : "Method",
+        "returns" : [
+          " * The NetSpeed object"
+        ],
+        "name" : "start",
+        "parameters" : [
+          " * None",
+          ""
+        ]
+      },
+      {
+        "doc" : "Stop monitoring network speed\n\nParameters:\n * None\n\nReturns:\n * The NetSpeed object",
+        "desc" : "Stop monitoring network speed",
+        "def" : "NetSpeed:stop()",
+        "stripped_doc" : [
+          "Stop monitoring network speed",
+          ""
+        ],
+        "notes" : [
+
+        ],
+        "signature" : "NetSpeed:stop()",
+        "type" : "Method",
+        "returns" : [
+          " * The NetSpeed object"
+        ],
+        "name" : "stop",
+        "parameters" : [
+          " * None",
+          ""
+        ]
+      }
+    ],
+    "Field" : [
+
+    ],
+    "name" : "NetSpeed"
+  }
+]
