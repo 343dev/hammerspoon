@@ -1,0 +1,420 @@
+[
+  {
+    "Constant" : [
+
+    ],
+    "submodules" : [
+
+    ],
+    "Function" : [
+
+    ],
+    "Variable" : [
+      {
+        "doc" : "URLs used to check internet connectivity. Requests are made in parallel and\nthe first HTTP 200 or 204 response is treated as success.",
+        "stripped_doc" : [
+          "URLs used to check internet connectivity. Requests are made in parallel and",
+          "the first HTTP 200 or 204 response is treated as success."
+        ],
+        "name" : "checkUrls",
+        "desc" : "URLs used to check internet connectivity. Requests are made in parallel and",
+        "notes" : [
+
+        ],
+        "signature" : "InternetWatcher.checkUrls",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "def" : "InternetWatcher.checkUrls",
+        "parameters" : [
+
+        ]
+      },
+      {
+        "doc" : "Maximum time, in seconds, to wait for connectivity checks before treating the\nattempt as failed.",
+        "stripped_doc" : [
+          "Maximum time, in seconds, to wait for connectivity checks before treating the",
+          "attempt as failed."
+        ],
+        "name" : "timeout",
+        "desc" : "Maximum time, in seconds, to wait for connectivity checks before treating the",
+        "notes" : [
+
+        ],
+        "signature" : "InternetWatcher.timeout",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "def" : "InternetWatcher.timeout",
+        "parameters" : [
+
+        ]
+      },
+      {
+        "doc" : "Interval, in seconds, between connectivity checks while the Spoon is running.",
+        "stripped_doc" : [
+          "Interval, in seconds, between connectivity checks while the Spoon is running."
+        ],
+        "name" : "checkInterval",
+        "desc" : "Interval, in seconds, between connectivity checks while the Spoon is running.",
+        "notes" : [
+
+        ],
+        "signature" : "InternetWatcher.checkInterval",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "def" : "InternetWatcher.checkInterval",
+        "parameters" : [
+
+        ]
+      },
+      {
+        "doc" : "Number of consecutive failed checks required before the connection is treated\nas offline.",
+        "stripped_doc" : [
+          "Number of consecutive failed checks required before the connection is treated",
+          "as offline."
+        ],
+        "name" : "failureThreshold",
+        "desc" : "Number of consecutive failed checks required before the connection is treated",
+        "notes" : [
+
+        ],
+        "signature" : "InternetWatcher.failureThreshold",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "def" : "InternetWatcher.failureThreshold",
+        "parameters" : [
+
+        ]
+      },
+      {
+        "doc" : "Whether status sounds should be suppressed while macOS Focus mode appears active.",
+        "stripped_doc" : [
+          "Whether status sounds should be suppressed while macOS Focus mode appears active."
+        ],
+        "name" : "suppressSoundsInFocus",
+        "desc" : "Whether status sounds should be suppressed while macOS Focus mode appears active.",
+        "notes" : [
+
+        ],
+        "signature" : "InternetWatcher.suppressSoundsInFocus",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "def" : "InternetWatcher.suppressSoundsInFocus",
+        "parameters" : [
+
+        ]
+      }
+    ],
+    "stripped_doc" : [
+
+    ],
+    "Deprecated" : [
+
+    ],
+    "type" : "Module",
+    "desc" : "Monitor internet connectivity and display status in the menubar.",
+    "Constructor" : [
+
+    ],
+    "doc" : "Monitor internet connectivity and display status in the menubar.\n\nThe Spoon checks a list of connectivity endpoints on a timer. When the\nconnection is considered offline, it shows a warning in the menubar, sends a\nnotification, and plays `offline.wav`. When connectivity is restored, it hides\nthe menubar item, sends a notification, and plays `online.wav`.\n\nUsage:\n```lua\nhs.loadSpoon(\"InternetWatcher\")\nspoon.InternetWatcher:start()\n```\n\nDownload: https:\/\/github.com\/343dev\/spoons",
+    "Method" : [
+      {
+        "doc" : "Run one internet connectivity check immediately.\n\nParameters:\n * None\n\nReturns:\n * The InternetWatcher object",
+        "stripped_doc" : [
+          "Run one internet connectivity check immediately.",
+          ""
+        ],
+        "name" : "check",
+        "desc" : "Run one internet connectivity check immediately.",
+        "notes" : [
+
+        ],
+        "signature" : "InternetWatcher:check()",
+        "type" : "Method",
+        "returns" : [
+          " * The InternetWatcher object"
+        ],
+        "def" : "InternetWatcher:check()",
+        "parameters" : [
+          " * None",
+          ""
+        ]
+      },
+      {
+        "doc" : "Show current InternetWatcher state in Hammerspoon Console and the Hammerspoon log.\n\nParameters:\n * None\n\nReturns:\n * The InternetWatcher object",
+        "stripped_doc" : [
+          "Show current InternetWatcher state in Hammerspoon Console and the Hammerspoon log.",
+          ""
+        ],
+        "name" : "showStatus",
+        "desc" : "Show current InternetWatcher state in Hammerspoon Console and the Hammerspoon log.",
+        "notes" : [
+
+        ],
+        "signature" : "InternetWatcher:showStatus()",
+        "type" : "Method",
+        "returns" : [
+          " * The InternetWatcher object"
+        ],
+        "def" : "InternetWatcher:showStatus()",
+        "parameters" : [
+          " * None",
+          ""
+        ]
+      },
+      {
+        "doc" : "Start monitoring internet connectivity.\n\nParameters:\n * None\n\nReturns:\n * The InternetWatcher object",
+        "stripped_doc" : [
+          "Start monitoring internet connectivity.",
+          ""
+        ],
+        "name" : "start",
+        "desc" : "Start monitoring internet connectivity.",
+        "notes" : [
+
+        ],
+        "signature" : "InternetWatcher:start()",
+        "type" : "Method",
+        "returns" : [
+          " * The InternetWatcher object"
+        ],
+        "def" : "InternetWatcher:start()",
+        "parameters" : [
+          " * None",
+          ""
+        ]
+      },
+      {
+        "doc" : "Stop monitoring internet connectivity and clean up resources.\n\nParameters:\n * None\n\nReturns:\n * The InternetWatcher object",
+        "stripped_doc" : [
+          "Stop monitoring internet connectivity and clean up resources.",
+          ""
+        ],
+        "name" : "stop",
+        "desc" : "Stop monitoring internet connectivity and clean up resources.",
+        "notes" : [
+
+        ],
+        "signature" : "InternetWatcher:stop()",
+        "type" : "Method",
+        "returns" : [
+          " * The InternetWatcher object"
+        ],
+        "def" : "InternetWatcher:stop()",
+        "parameters" : [
+          " * None",
+          ""
+        ]
+      }
+    ],
+    "Command" : [
+
+    ],
+    "Field" : [
+
+    ],
+    "items" : [
+      {
+        "doc" : "Interval, in seconds, between connectivity checks while the Spoon is running.",
+        "stripped_doc" : [
+          "Interval, in seconds, between connectivity checks while the Spoon is running."
+        ],
+        "name" : "checkInterval",
+        "desc" : "Interval, in seconds, between connectivity checks while the Spoon is running.",
+        "notes" : [
+
+        ],
+        "signature" : "InternetWatcher.checkInterval",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "def" : "InternetWatcher.checkInterval",
+        "parameters" : [
+
+        ]
+      },
+      {
+        "doc" : "URLs used to check internet connectivity. Requests are made in parallel and\nthe first HTTP 200 or 204 response is treated as success.",
+        "stripped_doc" : [
+          "URLs used to check internet connectivity. Requests are made in parallel and",
+          "the first HTTP 200 or 204 response is treated as success."
+        ],
+        "name" : "checkUrls",
+        "desc" : "URLs used to check internet connectivity. Requests are made in parallel and",
+        "notes" : [
+
+        ],
+        "signature" : "InternetWatcher.checkUrls",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "def" : "InternetWatcher.checkUrls",
+        "parameters" : [
+
+        ]
+      },
+      {
+        "doc" : "Number of consecutive failed checks required before the connection is treated\nas offline.",
+        "stripped_doc" : [
+          "Number of consecutive failed checks required before the connection is treated",
+          "as offline."
+        ],
+        "name" : "failureThreshold",
+        "desc" : "Number of consecutive failed checks required before the connection is treated",
+        "notes" : [
+
+        ],
+        "signature" : "InternetWatcher.failureThreshold",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "def" : "InternetWatcher.failureThreshold",
+        "parameters" : [
+
+        ]
+      },
+      {
+        "doc" : "Whether status sounds should be suppressed while macOS Focus mode appears active.",
+        "stripped_doc" : [
+          "Whether status sounds should be suppressed while macOS Focus mode appears active."
+        ],
+        "name" : "suppressSoundsInFocus",
+        "desc" : "Whether status sounds should be suppressed while macOS Focus mode appears active.",
+        "notes" : [
+
+        ],
+        "signature" : "InternetWatcher.suppressSoundsInFocus",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "def" : "InternetWatcher.suppressSoundsInFocus",
+        "parameters" : [
+
+        ]
+      },
+      {
+        "doc" : "Maximum time, in seconds, to wait for connectivity checks before treating the\nattempt as failed.",
+        "stripped_doc" : [
+          "Maximum time, in seconds, to wait for connectivity checks before treating the",
+          "attempt as failed."
+        ],
+        "name" : "timeout",
+        "desc" : "Maximum time, in seconds, to wait for connectivity checks before treating the",
+        "notes" : [
+
+        ],
+        "signature" : "InternetWatcher.timeout",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "def" : "InternetWatcher.timeout",
+        "parameters" : [
+
+        ]
+      },
+      {
+        "doc" : "Run one internet connectivity check immediately.\n\nParameters:\n * None\n\nReturns:\n * The InternetWatcher object",
+        "stripped_doc" : [
+          "Run one internet connectivity check immediately.",
+          ""
+        ],
+        "name" : "check",
+        "desc" : "Run one internet connectivity check immediately.",
+        "notes" : [
+
+        ],
+        "signature" : "InternetWatcher:check()",
+        "type" : "Method",
+        "returns" : [
+          " * The InternetWatcher object"
+        ],
+        "def" : "InternetWatcher:check()",
+        "parameters" : [
+          " * None",
+          ""
+        ]
+      },
+      {
+        "doc" : "Show current InternetWatcher state in Hammerspoon Console and the Hammerspoon log.\n\nParameters:\n * None\n\nReturns:\n * The InternetWatcher object",
+        "stripped_doc" : [
+          "Show current InternetWatcher state in Hammerspoon Console and the Hammerspoon log.",
+          ""
+        ],
+        "name" : "showStatus",
+        "desc" : "Show current InternetWatcher state in Hammerspoon Console and the Hammerspoon log.",
+        "notes" : [
+
+        ],
+        "signature" : "InternetWatcher:showStatus()",
+        "type" : "Method",
+        "returns" : [
+          " * The InternetWatcher object"
+        ],
+        "def" : "InternetWatcher:showStatus()",
+        "parameters" : [
+          " * None",
+          ""
+        ]
+      },
+      {
+        "doc" : "Start monitoring internet connectivity.\n\nParameters:\n * None\n\nReturns:\n * The InternetWatcher object",
+        "stripped_doc" : [
+          "Start monitoring internet connectivity.",
+          ""
+        ],
+        "name" : "start",
+        "desc" : "Start monitoring internet connectivity.",
+        "notes" : [
+
+        ],
+        "signature" : "InternetWatcher:start()",
+        "type" : "Method",
+        "returns" : [
+          " * The InternetWatcher object"
+        ],
+        "def" : "InternetWatcher:start()",
+        "parameters" : [
+          " * None",
+          ""
+        ]
+      },
+      {
+        "doc" : "Stop monitoring internet connectivity and clean up resources.\n\nParameters:\n * None\n\nReturns:\n * The InternetWatcher object",
+        "stripped_doc" : [
+          "Stop monitoring internet connectivity and clean up resources.",
+          ""
+        ],
+        "name" : "stop",
+        "desc" : "Stop monitoring internet connectivity and clean up resources.",
+        "notes" : [
+
+        ],
+        "signature" : "InternetWatcher:stop()",
+        "type" : "Method",
+        "returns" : [
+          " * The InternetWatcher object"
+        ],
+        "def" : "InternetWatcher:stop()",
+        "parameters" : [
+          " * None",
+          ""
+        ]
+      }
+    ],
+    "name" : "InternetWatcher"
+  }
+]
