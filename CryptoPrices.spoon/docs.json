@@ -1,0 +1,210 @@
+[
+  {
+    "Constant" : [
+
+    ],
+    "submodules" : [
+
+    ],
+    "Function" : [
+
+    ],
+    "Variable" : [
+      {
+        "desc" : "Interval, in seconds, between price refreshes while the Spoon is running.",
+        "stripped_doc" : [
+          "Interval, in seconds, between price refreshes while the Spoon is running."
+        ],
+        "doc" : "Interval, in seconds, between price refreshes while the Spoon is running.",
+        "name" : "updateInterval",
+        "notes" : [
+
+        ],
+        "signature" : "CryptoPrices.updateInterval",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "def" : "CryptoPrices.updateInterval",
+        "parameters" : [
+
+        ]
+      }
+    ],
+    "stripped_doc" : [
+
+    ],
+    "desc" : "Display current BTC and ETH prices in USD in the menubar.",
+    "Deprecated" : [
+
+    ],
+    "type" : "Module",
+    "Constructor" : [
+
+    ],
+    "doc" : "Display current BTC and ETH prices in USD in the menubar.\n\nThe Spoon fetches prices from the CoinGecko public API on a timer and\ndisplays Bitcoin and Ethereum prices as a compact two-line menubar icon.\n\nUsage:\n```lua\nhs.loadSpoon(\"CryptoPrices\")\nspoon.CryptoPrices:start()\n```\n\nDownload: https:\/\/github.com\/343dev\/spoons",
+    "Field" : [
+
+    ],
+    "Command" : [
+
+    ],
+    "items" : [
+      {
+        "desc" : "Interval, in seconds, between price refreshes while the Spoon is running.",
+        "stripped_doc" : [
+          "Interval, in seconds, between price refreshes while the Spoon is running."
+        ],
+        "doc" : "Interval, in seconds, between price refreshes while the Spoon is running.",
+        "name" : "updateInterval",
+        "notes" : [
+
+        ],
+        "signature" : "CryptoPrices.updateInterval",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "def" : "CryptoPrices.updateInterval",
+        "parameters" : [
+
+        ]
+      },
+      {
+        "desc" : "Initializes the CryptoPrices Spoon.",
+        "stripped_doc" : [
+          "Initializes the CryptoPrices Spoon.",
+          ""
+        ],
+        "doc" : "Initializes the CryptoPrices Spoon.\n\nParameters:\n * None\n\nReturns:\n * The CryptoPrices object",
+        "name" : "init",
+        "notes" : [
+
+        ],
+        "signature" : "CryptoPrices:init()",
+        "type" : "Method",
+        "returns" : [
+          " * The CryptoPrices object"
+        ],
+        "def" : "CryptoPrices:init()",
+        "parameters" : [
+          " * None",
+          ""
+        ]
+      },
+      {
+        "desc" : "Start monitoring crypto prices.",
+        "stripped_doc" : [
+          "Start monitoring crypto prices.",
+          ""
+        ],
+        "doc" : "Start monitoring crypto prices.\n\nParameters:\n * None\n\nReturns:\n * The CryptoPrices object",
+        "name" : "start",
+        "notes" : [
+
+        ],
+        "signature" : "CryptoPrices:start()",
+        "type" : "Method",
+        "returns" : [
+          " * The CryptoPrices object"
+        ],
+        "def" : "CryptoPrices:start()",
+        "parameters" : [
+          " * None",
+          ""
+        ]
+      },
+      {
+        "desc" : "Stop monitoring crypto prices.",
+        "stripped_doc" : [
+          "Stop monitoring crypto prices.",
+          ""
+        ],
+        "doc" : "Stop monitoring crypto prices.\n\nParameters:\n * None\n\nReturns:\n * The CryptoPrices object",
+        "name" : "stop",
+        "notes" : [
+
+        ],
+        "signature" : "CryptoPrices:stop()",
+        "type" : "Method",
+        "returns" : [
+          " * The CryptoPrices object"
+        ],
+        "def" : "CryptoPrices:stop()",
+        "parameters" : [
+          " * None",
+          ""
+        ]
+      }
+    ],
+    "Method" : [
+      {
+        "desc" : "Initializes the CryptoPrices Spoon.",
+        "stripped_doc" : [
+          "Initializes the CryptoPrices Spoon.",
+          ""
+        ],
+        "doc" : "Initializes the CryptoPrices Spoon.\n\nParameters:\n * None\n\nReturns:\n * The CryptoPrices object",
+        "name" : "init",
+        "notes" : [
+
+        ],
+        "signature" : "CryptoPrices:init()",
+        "type" : "Method",
+        "returns" : [
+          " * The CryptoPrices object"
+        ],
+        "def" : "CryptoPrices:init()",
+        "parameters" : [
+          " * None",
+          ""
+        ]
+      },
+      {
+        "desc" : "Start monitoring crypto prices.",
+        "stripped_doc" : [
+          "Start monitoring crypto prices.",
+          ""
+        ],
+        "doc" : "Start monitoring crypto prices.\n\nParameters:\n * None\n\nReturns:\n * The CryptoPrices object",
+        "name" : "start",
+        "notes" : [
+
+        ],
+        "signature" : "CryptoPrices:start()",
+        "type" : "Method",
+        "returns" : [
+          " * The CryptoPrices object"
+        ],
+        "def" : "CryptoPrices:start()",
+        "parameters" : [
+          " * None",
+          ""
+        ]
+      },
+      {
+        "desc" : "Stop monitoring crypto prices.",
+        "stripped_doc" : [
+          "Stop monitoring crypto prices.",
+          ""
+        ],
+        "doc" : "Stop monitoring crypto prices.\n\nParameters:\n * None\n\nReturns:\n * The CryptoPrices object",
+        "name" : "stop",
+        "notes" : [
+
+        ],
+        "signature" : "CryptoPrices:stop()",
+        "type" : "Method",
+        "returns" : [
+          " * The CryptoPrices object"
+        ],
+        "def" : "CryptoPrices:stop()",
+        "parameters" : [
+          " * None",
+          ""
+        ]
+      }
+    ],
+    "name" : "CryptoPrices"
+  }
+]
