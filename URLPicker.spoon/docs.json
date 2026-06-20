@@ -1,0 +1,558 @@
+[
+  {
+    "Constant" : [
+
+    ],
+    "submodules" : [
+
+    ],
+    "Function" : [
+
+    ],
+    "Variable" : [
+      {
+        "doc" : "Logger object used within the Spoon.",
+        "name" : "logger",
+        "stripped_doc" : [
+          "Logger object used within the Spoon."
+        ],
+        "desc" : "Logger object used within the Spoon.",
+        "notes" : [
+
+        ],
+        "signature" : "URLPicker.logger",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "def" : "URLPicker.logger",
+        "parameters" : [
+
+        ]
+      },
+      {
+        "doc" : "Browser bundle IDs pinned to the top of the picker, in display order. Only\ninstalled handlers for the URL scheme are shown. Default: `{}`.\n\nExample: `{ \"org.mozilla.firefox\", \"com.google.Chrome\" }`.",
+        "name" : "pinnedBrowsers",
+        "stripped_doc" : [
+          "Browser bundle IDs pinned to the top of the picker, in display order. Only",
+          "installed handlers for the URL scheme are shown. Default: `{}`.",
+          "",
+          "Example: `{ \"org.mozilla.firefox\", \"com.google.Chrome\" }`."
+        ],
+        "desc" : "Browser bundle IDs pinned to the top of the picker, in display order. Only",
+        "notes" : [
+
+        ],
+        "signature" : "URLPicker.pinnedBrowsers",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "def" : "URLPicker.pinnedBrowsers",
+        "parameters" : [
+
+        ]
+      },
+      {
+        "doc" : "Configuration table used by `start()` and `configure()`.\n\nFields:\n * autoSetDefaultHandlers - If true, `start()` sets Hammerspoon as the default\n   handler for `http` and `https` links. Default: true.\n * restoreDefaultHandlersOnStop - If true, `stop()` restores the previous\n   default handlers captured by `enable()`. Default: false.\n * maxCandidates - Maximum number of browser candidates shown in the picker.\n   Default: 24.",
+        "name" : "config",
+        "stripped_doc" : [
+          "Configuration table used by `start()` and `configure()`.",
+          "",
+          "Fields:",
+          " * autoSetDefaultHandlers - If true, `start()` sets Hammerspoon as the default",
+          "   handler for `http` and `https` links. Default: true.",
+          " * restoreDefaultHandlersOnStop - If true, `stop()` restores the previous",
+          "   default handlers captured by `enable()`. Default: false.",
+          " * maxCandidates - Maximum number of browser candidates shown in the picker.",
+          "   Default: 24."
+        ],
+        "desc" : "Configuration table used by `start()` and `configure()`.",
+        "notes" : [
+
+        ],
+        "signature" : "URLPicker.config",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "def" : "URLPicker.config",
+        "parameters" : [
+
+        ]
+      }
+    ],
+    "stripped_doc" : [
+
+    ],
+    "Deprecated" : [
+
+    ],
+    "type" : "Module",
+    "desc" : "Intercept `http`\/`https` URL events and choose which browser opens each link.",
+    "Constructor" : [
+
+    ],
+    "doc" : "Intercept `http`\/`https` URL events and choose which browser opens each link.\n\nURLPicker registers Hammerspoon as the default handler for web links, then\ndisplays a compact browser picker near the mouse cursor whenever a URL is\nopened. Choose with the mouse, arrow keys, Return, or dismiss with Escape.\n\nUsage:\n```lua\nhs.loadSpoon(\"URLPicker\")\nspoon.URLPicker:start()\n```\n\nOptional configuration:\n```lua\nspoon.URLPicker.pinnedBrowsers = { \"org.mozilla.firefox\" }\nspoon.URLPicker:start({\n  autoSetDefaultHandlers = true,\n  restoreDefaultHandlersOnStop = false,\n  maxCandidates = 24,\n})\n```\n\nDownload: https:\/\/github.com\/343dev\/spoons",
+    "Method" : [
+      {
+        "doc" : "Initializes the URLPicker Spoon. Called automatically by `hs.loadSpoon()`.\n\nThis method does not register URL handlers, change default browser settings,\nstart event taps, or show UI. Call `start()` to enable URL interception.\n\nParameters:\n * None\n\nReturns:\n * The URLPicker object",
+        "name" : "init",
+        "stripped_doc" : [
+          "Initializes the URLPicker Spoon. Called automatically by `hs.loadSpoon()`.",
+          "",
+          "This method does not register URL handlers, change default browser settings,",
+          "start event taps, or show UI. Call `start()` to enable URL interception.",
+          ""
+        ],
+        "desc" : "Initializes the URLPicker Spoon. Called automatically by `hs.loadSpoon()`.",
+        "notes" : [
+
+        ],
+        "signature" : "URLPicker:init()",
+        "type" : "Method",
+        "returns" : [
+          " * The URLPicker object"
+        ],
+        "def" : "URLPicker:init()",
+        "parameters" : [
+          " * None",
+          ""
+        ]
+      },
+      {
+        "doc" : "Applies configuration values without starting the Spoon.\n\nParameters:\n * config - A table containing any of the following optional keys:\n   * autoSetDefaultHandlers - A boolean controlling whether `start()` calls\n     `enable()` automatically.\n   * restoreDefaultHandlersOnStop - A boolean controlling whether `stop()`\n     restores default URL handlers captured by `enable()`.\n   * maxCandidates - A number limiting browser candidates shown in the picker.\n   * pinnedBrowsers - An array of browser bundle IDs pinned to the top of the\n     picker, for example `{ \"org.mozilla.firefox\", \"com.google.Chrome\" }`.\n\nReturns:\n * The URLPicker object",
+        "name" : "configure",
+        "stripped_doc" : [
+          "Applies configuration values without starting the Spoon.",
+          ""
+        ],
+        "desc" : "Applies configuration values without starting the Spoon.",
+        "notes" : [
+
+        ],
+        "signature" : "URLPicker:configure(config)",
+        "type" : "Method",
+        "returns" : [
+          " * The URLPicker object"
+        ],
+        "def" : "URLPicker:configure(config)",
+        "parameters" : [
+          " * config - A table containing any of the following optional keys:",
+          "   * autoSetDefaultHandlers - A boolean controlling whether `start()` calls",
+          "     `enable()` automatically.",
+          "   * restoreDefaultHandlersOnStop - A boolean controlling whether `stop()`",
+          "     restores default URL handlers captured by `enable()`.",
+          "   * maxCandidates - A number limiting browser candidates shown in the picker.",
+          "   * pinnedBrowsers - An array of browser bundle IDs pinned to the top of the",
+          "     picker, for example `{ \"org.mozilla.firefox\", \"com.google.Chrome\" }`.",
+          ""
+        ]
+      },
+      {
+        "doc" : "Shows the browser picker for a URL.\n\nParameters:\n * url - A string containing an `http` or `https` URL.\n\nReturns:\n * A boolean, true if the picker was shown, otherwise false",
+        "name" : "show",
+        "stripped_doc" : [
+          "Shows the browser picker for a URL.",
+          ""
+        ],
+        "desc" : "Shows the browser picker for a URL.",
+        "notes" : [
+
+        ],
+        "signature" : "URLPicker:show(url)",
+        "type" : "Method",
+        "returns" : [
+          " * A boolean, true if the picker was shown, otherwise false"
+        ],
+        "def" : "URLPicker:show(url)",
+        "parameters" : [
+          " * url - A string containing an `http` or `https` URL.",
+          ""
+        ]
+      },
+      {
+        "doc" : "Sets Hammerspoon as the default handler for `http` and `https` URLs.\n\nThe previous handlers are remembered so they can be restored later by\n`disable()` or by `stop()` when `restoreDefaultHandlersOnStop` is true.\n\nParameters:\n * None\n\nReturns:\n * A boolean, true after both default-handler change requests are submitted",
+        "name" : "enable",
+        "stripped_doc" : [
+          "Sets Hammerspoon as the default handler for `http` and `https` URLs.",
+          "",
+          "The previous handlers are remembered so they can be restored later by",
+          "`disable()` or by `stop()` when `restoreDefaultHandlersOnStop` is true.",
+          ""
+        ],
+        "desc" : "Sets Hammerspoon as the default handler for `http` and `https` URLs.",
+        "notes" : [
+
+        ],
+        "signature" : "URLPicker:enable()",
+        "type" : "Method",
+        "returns" : [
+          " * A boolean, true after both default-handler change requests are submitted"
+        ],
+        "def" : "URLPicker:enable()",
+        "parameters" : [
+          " * None",
+          ""
+        ]
+      },
+      {
+        "doc" : "Restores the default `http` and `https` URL handlers captured by `enable()`.\n\nParameters:\n * None\n\nReturns:\n * A boolean, true after the restore attempt completes",
+        "name" : "disable",
+        "stripped_doc" : [
+          "Restores the default `http` and `https` URL handlers captured by `enable()`.",
+          ""
+        ],
+        "desc" : "Restores the default `http` and `https` URL handlers captured by `enable()`.",
+        "notes" : [
+
+        ],
+        "signature" : "URLPicker:disable()",
+        "type" : "Method",
+        "returns" : [
+          " * A boolean, true after the restore attempt completes"
+        ],
+        "def" : "URLPicker:disable()",
+        "parameters" : [
+          " * None",
+          ""
+        ]
+      },
+      {
+        "doc" : "Closes the browser picker UI and stops temporary event taps.\n\nParameters:\n * None\n\nReturns:\n * The URLPicker object",
+        "name" : "cleanup",
+        "stripped_doc" : [
+          "Closes the browser picker UI and stops temporary event taps.",
+          ""
+        ],
+        "desc" : "Closes the browser picker UI and stops temporary event taps.",
+        "notes" : [
+
+        ],
+        "signature" : "URLPicker:cleanup()",
+        "type" : "Method",
+        "returns" : [
+          " * The URLPicker object"
+        ],
+        "def" : "URLPicker:cleanup()",
+        "parameters" : [
+          " * None",
+          ""
+        ]
+      },
+      {
+        "doc" : "Starts URL interception.\n\nParameters:\n * config - An optional configuration table accepted by `configure()`.\n\nReturns:\n * The URLPicker object",
+        "name" : "start",
+        "stripped_doc" : [
+          "Starts URL interception.",
+          ""
+        ],
+        "desc" : "Starts URL interception.",
+        "notes" : [
+
+        ],
+        "signature" : "URLPicker:start([config])",
+        "type" : "Method",
+        "returns" : [
+          " * The URLPicker object"
+        ],
+        "def" : "URLPicker:start([config])",
+        "parameters" : [
+          " * config - An optional configuration table accepted by `configure()`.",
+          ""
+        ]
+      },
+      {
+        "doc" : "Stops URL interception and closes any visible picker UI.\n\nParameters:\n * None\n\nReturns:\n * The URLPicker object",
+        "name" : "stop",
+        "stripped_doc" : [
+          "Stops URL interception and closes any visible picker UI.",
+          ""
+        ],
+        "desc" : "Stops URL interception and closes any visible picker UI.",
+        "notes" : [
+
+        ],
+        "signature" : "URLPicker:stop()",
+        "type" : "Method",
+        "returns" : [
+          " * The URLPicker object"
+        ],
+        "def" : "URLPicker:stop()",
+        "parameters" : [
+          " * None",
+          ""
+        ]
+      }
+    ],
+    "Command" : [
+
+    ],
+    "Field" : [
+
+    ],
+    "items" : [
+      {
+        "doc" : "Configuration table used by `start()` and `configure()`.\n\nFields:\n * autoSetDefaultHandlers - If true, `start()` sets Hammerspoon as the default\n   handler for `http` and `https` links. Default: true.\n * restoreDefaultHandlersOnStop - If true, `stop()` restores the previous\n   default handlers captured by `enable()`. Default: false.\n * maxCandidates - Maximum number of browser candidates shown in the picker.\n   Default: 24.",
+        "name" : "config",
+        "stripped_doc" : [
+          "Configuration table used by `start()` and `configure()`.",
+          "",
+          "Fields:",
+          " * autoSetDefaultHandlers - If true, `start()` sets Hammerspoon as the default",
+          "   handler for `http` and `https` links. Default: true.",
+          " * restoreDefaultHandlersOnStop - If true, `stop()` restores the previous",
+          "   default handlers captured by `enable()`. Default: false.",
+          " * maxCandidates - Maximum number of browser candidates shown in the picker.",
+          "   Default: 24."
+        ],
+        "desc" : "Configuration table used by `start()` and `configure()`.",
+        "notes" : [
+
+        ],
+        "signature" : "URLPicker.config",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "def" : "URLPicker.config",
+        "parameters" : [
+
+        ]
+      },
+      {
+        "doc" : "Logger object used within the Spoon.",
+        "name" : "logger",
+        "stripped_doc" : [
+          "Logger object used within the Spoon."
+        ],
+        "desc" : "Logger object used within the Spoon.",
+        "notes" : [
+
+        ],
+        "signature" : "URLPicker.logger",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "def" : "URLPicker.logger",
+        "parameters" : [
+
+        ]
+      },
+      {
+        "doc" : "Browser bundle IDs pinned to the top of the picker, in display order. Only\ninstalled handlers for the URL scheme are shown. Default: `{}`.\n\nExample: `{ \"org.mozilla.firefox\", \"com.google.Chrome\" }`.",
+        "name" : "pinnedBrowsers",
+        "stripped_doc" : [
+          "Browser bundle IDs pinned to the top of the picker, in display order. Only",
+          "installed handlers for the URL scheme are shown. Default: `{}`.",
+          "",
+          "Example: `{ \"org.mozilla.firefox\", \"com.google.Chrome\" }`."
+        ],
+        "desc" : "Browser bundle IDs pinned to the top of the picker, in display order. Only",
+        "notes" : [
+
+        ],
+        "signature" : "URLPicker.pinnedBrowsers",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "def" : "URLPicker.pinnedBrowsers",
+        "parameters" : [
+
+        ]
+      },
+      {
+        "doc" : "Closes the browser picker UI and stops temporary event taps.\n\nParameters:\n * None\n\nReturns:\n * The URLPicker object",
+        "name" : "cleanup",
+        "stripped_doc" : [
+          "Closes the browser picker UI and stops temporary event taps.",
+          ""
+        ],
+        "desc" : "Closes the browser picker UI and stops temporary event taps.",
+        "notes" : [
+
+        ],
+        "signature" : "URLPicker:cleanup()",
+        "type" : "Method",
+        "returns" : [
+          " * The URLPicker object"
+        ],
+        "def" : "URLPicker:cleanup()",
+        "parameters" : [
+          " * None",
+          ""
+        ]
+      },
+      {
+        "doc" : "Applies configuration values without starting the Spoon.\n\nParameters:\n * config - A table containing any of the following optional keys:\n   * autoSetDefaultHandlers - A boolean controlling whether `start()` calls\n     `enable()` automatically.\n   * restoreDefaultHandlersOnStop - A boolean controlling whether `stop()`\n     restores default URL handlers captured by `enable()`.\n   * maxCandidates - A number limiting browser candidates shown in the picker.\n   * pinnedBrowsers - An array of browser bundle IDs pinned to the top of the\n     picker, for example `{ \"org.mozilla.firefox\", \"com.google.Chrome\" }`.\n\nReturns:\n * The URLPicker object",
+        "name" : "configure",
+        "stripped_doc" : [
+          "Applies configuration values without starting the Spoon.",
+          ""
+        ],
+        "desc" : "Applies configuration values without starting the Spoon.",
+        "notes" : [
+
+        ],
+        "signature" : "URLPicker:configure(config)",
+        "type" : "Method",
+        "returns" : [
+          " * The URLPicker object"
+        ],
+        "def" : "URLPicker:configure(config)",
+        "parameters" : [
+          " * config - A table containing any of the following optional keys:",
+          "   * autoSetDefaultHandlers - A boolean controlling whether `start()` calls",
+          "     `enable()` automatically.",
+          "   * restoreDefaultHandlersOnStop - A boolean controlling whether `stop()`",
+          "     restores default URL handlers captured by `enable()`.",
+          "   * maxCandidates - A number limiting browser candidates shown in the picker.",
+          "   * pinnedBrowsers - An array of browser bundle IDs pinned to the top of the",
+          "     picker, for example `{ \"org.mozilla.firefox\", \"com.google.Chrome\" }`.",
+          ""
+        ]
+      },
+      {
+        "doc" : "Restores the default `http` and `https` URL handlers captured by `enable()`.\n\nParameters:\n * None\n\nReturns:\n * A boolean, true after the restore attempt completes",
+        "name" : "disable",
+        "stripped_doc" : [
+          "Restores the default `http` and `https` URL handlers captured by `enable()`.",
+          ""
+        ],
+        "desc" : "Restores the default `http` and `https` URL handlers captured by `enable()`.",
+        "notes" : [
+
+        ],
+        "signature" : "URLPicker:disable()",
+        "type" : "Method",
+        "returns" : [
+          " * A boolean, true after the restore attempt completes"
+        ],
+        "def" : "URLPicker:disable()",
+        "parameters" : [
+          " * None",
+          ""
+        ]
+      },
+      {
+        "doc" : "Sets Hammerspoon as the default handler for `http` and `https` URLs.\n\nThe previous handlers are remembered so they can be restored later by\n`disable()` or by `stop()` when `restoreDefaultHandlersOnStop` is true.\n\nParameters:\n * None\n\nReturns:\n * A boolean, true after both default-handler change requests are submitted",
+        "name" : "enable",
+        "stripped_doc" : [
+          "Sets Hammerspoon as the default handler for `http` and `https` URLs.",
+          "",
+          "The previous handlers are remembered so they can be restored later by",
+          "`disable()` or by `stop()` when `restoreDefaultHandlersOnStop` is true.",
+          ""
+        ],
+        "desc" : "Sets Hammerspoon as the default handler for `http` and `https` URLs.",
+        "notes" : [
+
+        ],
+        "signature" : "URLPicker:enable()",
+        "type" : "Method",
+        "returns" : [
+          " * A boolean, true after both default-handler change requests are submitted"
+        ],
+        "def" : "URLPicker:enable()",
+        "parameters" : [
+          " * None",
+          ""
+        ]
+      },
+      {
+        "doc" : "Initializes the URLPicker Spoon. Called automatically by `hs.loadSpoon()`.\n\nThis method does not register URL handlers, change default browser settings,\nstart event taps, or show UI. Call `start()` to enable URL interception.\n\nParameters:\n * None\n\nReturns:\n * The URLPicker object",
+        "name" : "init",
+        "stripped_doc" : [
+          "Initializes the URLPicker Spoon. Called automatically by `hs.loadSpoon()`.",
+          "",
+          "This method does not register URL handlers, change default browser settings,",
+          "start event taps, or show UI. Call `start()` to enable URL interception.",
+          ""
+        ],
+        "desc" : "Initializes the URLPicker Spoon. Called automatically by `hs.loadSpoon()`.",
+        "notes" : [
+
+        ],
+        "signature" : "URLPicker:init()",
+        "type" : "Method",
+        "returns" : [
+          " * The URLPicker object"
+        ],
+        "def" : "URLPicker:init()",
+        "parameters" : [
+          " * None",
+          ""
+        ]
+      },
+      {
+        "doc" : "Shows the browser picker for a URL.\n\nParameters:\n * url - A string containing an `http` or `https` URL.\n\nReturns:\n * A boolean, true if the picker was shown, otherwise false",
+        "name" : "show",
+        "stripped_doc" : [
+          "Shows the browser picker for a URL.",
+          ""
+        ],
+        "desc" : "Shows the browser picker for a URL.",
+        "notes" : [
+
+        ],
+        "signature" : "URLPicker:show(url)",
+        "type" : "Method",
+        "returns" : [
+          " * A boolean, true if the picker was shown, otherwise false"
+        ],
+        "def" : "URLPicker:show(url)",
+        "parameters" : [
+          " * url - A string containing an `http` or `https` URL.",
+          ""
+        ]
+      },
+      {
+        "doc" : "Starts URL interception.\n\nParameters:\n * config - An optional configuration table accepted by `configure()`.\n\nReturns:\n * The URLPicker object",
+        "name" : "start",
+        "stripped_doc" : [
+          "Starts URL interception.",
+          ""
+        ],
+        "desc" : "Starts URL interception.",
+        "notes" : [
+
+        ],
+        "signature" : "URLPicker:start([config])",
+        "type" : "Method",
+        "returns" : [
+          " * The URLPicker object"
+        ],
+        "def" : "URLPicker:start([config])",
+        "parameters" : [
+          " * config - An optional configuration table accepted by `configure()`.",
+          ""
+        ]
+      },
+      {
+        "doc" : "Stops URL interception and closes any visible picker UI.\n\nParameters:\n * None\n\nReturns:\n * The URLPicker object",
+        "name" : "stop",
+        "stripped_doc" : [
+          "Stops URL interception and closes any visible picker UI.",
+          ""
+        ],
+        "desc" : "Stops URL interception and closes any visible picker UI.",
+        "notes" : [
+
+        ],
+        "signature" : "URLPicker:stop()",
+        "type" : "Method",
+        "returns" : [
+          " * The URLPicker object"
+        ],
+        "def" : "URLPicker:stop()",
+        "parameters" : [
+          " * None",
+          ""
+        ]
+      }
+    ],
+    "name" : "URLPicker"
+  }
+]
