@@ -103,7 +103,7 @@
     "Constructor" : [
 
     ],
-    "doc" : "Monitor network interface throughput and display upload\/download speed in the menubar.\n\nNetSpeed reads byte counters from macOS `netstat` for a configurable network\ninterface and renders a compact two-line menubar icon.\n\nUsage:\n```lua\nhs.loadSpoon(\"NetSpeed\")\nspoon.NetSpeed:start()\n```\n\nConfigure the interface before starting if needed:\n```lua\nspoon.NetSpeed.interface = \"en0\"\nspoon.NetSpeed.fallbackInterface = \"utun0\"\nspoon.NetSpeed.updateInterval = 1\nspoon.NetSpeed:start()\n```\n\nDownload: https:\/\/github.com\/343dev\/spoons",
+    "doc" : "Monitor network interface throughput and display upload\/download speed in the menubar.\n\nNetSpeed reads byte counters from macOS `netstat` for a configurable network\ninterface and renders a compact two-line menubar icon.\n\nUsage:\n```lua\nhs.loadSpoon(\"NetSpeed\")\nspoon.NetSpeed:start()\n```\n\nConfigure the interface before starting if needed:\n```lua\nspoon.NetSpeed.interface = \"en0\"\nspoon.NetSpeed.fallbackInterface = \"utun0\"\nspoon.NetSpeed.updateInterval = 1\nspoon.NetSpeed:start()\n```\n\nDownload: https:\/\/github.com\/343dev\/hammerspoon",
     "Method" : [
       {
         "doc" : "Start monitoring network speed\n\nParameters:\n * None\n\nReturns:\n * The NetSpeed object",

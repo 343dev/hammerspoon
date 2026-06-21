@@ -20,7 +20,7 @@
 --- })
 --- ```
 ---
---- Download: https://github.com/343dev/spoons
+--- Download: https://github.com/343dev/hammerspoon
 
 local canvas = require("hs.canvas")
 local drawing = require("hs.drawing")
@@ -39,7 +39,7 @@ obj.name = "TimeMachine"
 obj.version = "1.0"
 obj.author = "343dev"
 obj.license = "MIT - https://opensource.org/licenses/MIT"
-obj.homepage = "https://github.com/343dev/spoons"
+obj.homepage = "https://github.com/343dev/hammerspoon"
 
 --- TimeMachine.checkInterval
 --- Variable

@@ -42,7 +42,7 @@
     "Constructor" : [
 
     ],
-    "doc" : "Display current BTC and ETH prices in USD in the menubar.\n\nThe Spoon fetches prices from the CoinGecko public API on a timer and\ndisplays Bitcoin and Ethereum prices as a compact two-line menubar icon.\n\nUsage:\n```lua\nhs.loadSpoon(\"CryptoPrices\")\nspoon.CryptoPrices:start()\n```\n\nDownload: https:\/\/github.com\/343dev\/spoons",
+    "doc" : "Display current BTC and ETH prices in USD in the menubar.\n\nThe Spoon fetches prices from the CoinGecko public API on a timer and\ndisplays Bitcoin and Ethereum prices as a compact two-line menubar icon.\n\nUsage:\n```lua\nhs.loadSpoon(\"CryptoPrices\")\nspoon.CryptoPrices:start()\n```\n\nDownload: https:\/\/github.com\/343dev\/hammerspoon",
     "Method" : [
       {
         "doc" : "Initializes the CryptoPrices Spoon.\n\nParameters:\n * None\n\nReturns:\n * The CryptoPrices object",

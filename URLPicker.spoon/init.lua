@@ -22,7 +22,7 @@
 --- })
 --- ```
 ---
---- Download: https://github.com/343dev/spoons
+--- Download: https://github.com/343dev/hammerspoon
 
 -- @class URLPickerState
 -- @field popup table|userdata|nil
@@ -50,7 +50,7 @@ URLPicker.name = "URLPicker"
 URLPicker.version = "2.0.0"
 URLPicker.author = "343dev"
 URLPicker.license = "MIT - https://opensource.org/licenses/MIT"
-URLPicker.homepage = "https://github.com/343dev/spoons"
+URLPicker.homepage = "https://github.com/343dev/hammerspoon"
 
 --- URLPicker.logger
 --- Variable

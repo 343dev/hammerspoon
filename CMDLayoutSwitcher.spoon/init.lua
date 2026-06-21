@@ -22,7 +22,7 @@
 --- })
 --- ```
 ---
---- Download: https://github.com/343dev/spoons
+--- Download: https://github.com/343dev/hammerspoon
 
 local obj = {}
 obj.__index = obj
@@ -32,7 +32,7 @@ obj.name = "CMDLayoutSwitcher"
 obj.version = "1.1"
 obj.author = "343dev"
 obj.license = "MIT - https://opensource.org/licenses/MIT"
-obj.homepage = "https://github.com/343dev/spoons"
+obj.homepage = "https://github.com/343dev/hammerspoon"
 
 -- Internal state
 obj._tap = nil

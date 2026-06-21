@@ -11,7 +11,7 @@
 --- spoon.CryptoPrices:start()
 --- ```
 ---
---- Download: https://github.com/343dev/spoons
+--- Download: https://github.com/343dev/hammerspoon
 
 local canvas = require("hs.canvas")
 local caffeinate = require("hs.caffeinate")
@@ -30,7 +30,7 @@ obj.name = "CryptoPrices"
 obj.version = "1.0"
 obj.author = "343dev"
 obj.license = "MIT - https://opensource.org/licenses/MIT"
-obj.homepage = "https://github.com/343dev/spoons"
+obj.homepage = "https://github.com/343dev/hammerspoon"
 
 obj.logger = logger.new("CryptoPrices")
 

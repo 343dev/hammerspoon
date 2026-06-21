@@ -20,7 +20,7 @@
 --- })
 --- ```
 ---
---- Download: https://github.com/343dev/spoons
+--- Download: https://github.com/343dev/hammerspoon
 
 local alert = require("hs.alert")
 local application = require("hs.application")
@@ -43,7 +43,7 @@ obj.name = "Pomodoor"
 obj.version = "1.0"
 obj.author = "343dev"
 obj.license = "MIT - https://opensource.org/licenses/MIT"
-obj.homepage = "https://github.com/343dev/spoons"
+obj.homepage = "https://github.com/343dev/hammerspoon"
 
 --- Pomodoor.workingTime
 --- Variable

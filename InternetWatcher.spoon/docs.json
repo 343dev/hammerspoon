@@ -125,7 +125,7 @@
     "Constructor" : [
 
     ],
-    "doc" : "Monitor internet connectivity and display status in the menubar.\n\nThe Spoon checks a list of connectivity endpoints on a timer. When the\nconnection is considered offline, it shows a warning in the menubar, sends a\nnotification, and plays `offline.wav`. When connectivity is restored, it hides\nthe menubar item, sends a notification, and plays `online.wav`.\n\nUsage:\n```lua\nhs.loadSpoon(\"InternetWatcher\")\nspoon.InternetWatcher:start()\n```\n\nDownload: https:\/\/github.com\/343dev\/spoons",
+    "doc" : "Monitor internet connectivity and display status in the menubar.\n\nThe Spoon checks a list of connectivity endpoints on a timer. When the\nconnection is considered offline, it shows a warning in the menubar, sends a\nnotification, and plays `offline.wav`. When connectivity is restored, it hides\nthe menubar item, sends a notification, and plays `online.wav`.\n\nUsage:\n```lua\nhs.loadSpoon(\"InternetWatcher\")\nspoon.InternetWatcher:start()\n```\n\nDownload: https:\/\/github.com\/343dev\/hammerspoon",
     "Method" : [
       {
         "doc" : "Run one internet connectivity check immediately.\n\nParameters:\n * None\n\nReturns:\n * The InternetWatcher object",

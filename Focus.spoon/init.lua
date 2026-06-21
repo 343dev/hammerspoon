@@ -18,7 +18,7 @@
 --- })
 --- ```
 ---
---- Download: https://github.com/343dev/spoons
+--- Download: https://github.com/343dev/hammerspoon
 
 local caffeinate = require("hs.caffeinate")
 local canvas = require("hs.canvas")
@@ -39,7 +39,7 @@ obj.name = "Focus"
 obj.version = "1.0"
 obj.author = "343dev"
 obj.license = "MIT - https://opensource.org/licenses/MIT"
-obj.homepage = "https://github.com/343dev/spoons"
+obj.homepage = "https://github.com/343dev/hammerspoon"
 
 -- Default settings
 obj.focusTime = 55 * 60

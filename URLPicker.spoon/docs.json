@@ -93,7 +93,7 @@
     "Constructor" : [
 
     ],
-    "doc" : "Intercept `http`\/`https` URL events and choose which browser opens each link.\n\nURLPicker registers Hammerspoon as the default handler for web links, then\ndisplays a compact browser picker near the mouse cursor whenever a URL is\nopened. Choose with the mouse, arrow keys, Return, or dismiss with Escape.\n\nUsage:\n```lua\nhs.loadSpoon(\"URLPicker\")\nspoon.URLPicker:start()\n```\n\nOptional configuration:\n```lua\nspoon.URLPicker.pinnedBrowsers = { \"org.mozilla.firefox\" }\nspoon.URLPicker:start({\n  autoSetDefaultHandlers = true,\n  restoreDefaultHandlersOnStop = false,\n  maxCandidates = 24,\n})\n```\n\nDownload: https:\/\/github.com\/343dev\/spoons",
+    "doc" : "Intercept `http`\/`https` URL events and choose which browser opens each link.\n\nURLPicker registers Hammerspoon as the default handler for web links, then\ndisplays a compact browser picker near the mouse cursor whenever a URL is\nopened. Choose with the mouse, arrow keys, Return, or dismiss with Escape.\n\nUsage:\n```lua\nhs.loadSpoon(\"URLPicker\")\nspoon.URLPicker:start()\n```\n\nOptional configuration:\n```lua\nspoon.URLPicker.pinnedBrowsers = { \"org.mozilla.firefox\" }\nspoon.URLPicker:start({\n  autoSetDefaultHandlers = true,\n  restoreDefaultHandlersOnStop = false,\n  maxCandidates = 24,\n})\n```\n\nDownload: https:\/\/github.com\/343dev\/hammerspoon",
     "Method" : [
       {
         "doc" : "Initializes the URLPicker Spoon. Called automatically by `hs.loadSpoon()`.\n\nThis method does not register URL handlers, change default browser settings,\nstart event taps, or show UI. Call `start()` to enable URL interception.\n\nParameters:\n * None\n\nReturns:\n * The URLPicker object",

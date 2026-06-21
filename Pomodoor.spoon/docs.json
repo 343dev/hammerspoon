@@ -182,7 +182,7 @@
     "Constructor" : [
 
     ],
-    "doc" : "Pomodoro timer with work\/break cycles.\n\nPomodoor shows the remaining work or break time in the menubar, plays bundled\nsounds when sessions change, and keeps a daily pomodoro count in\n`hs.settings`.\n\nUsage:\n```lua\nhs.loadSpoon(\"Pomodoor\")\nspoon.Pomodoor:start()\n```\n\nOptional hotkeys:\n```lua\nspoon.Pomodoor:bindHotkeys({\n  start = {{\"cmd\", \"alt\", \"ctrl\"}, \"9\"},\n  pause = {{\"cmd\", \"alt\", \"ctrl\"}, \"0\"},\n})\n```\n\nDownload: https:\/\/github.com\/343dev\/spoons",
+    "doc" : "Pomodoro timer with work\/break cycles.\n\nPomodoor shows the remaining work or break time in the menubar, plays bundled\nsounds when sessions change, and keeps a daily pomodoro count in\n`hs.settings`.\n\nUsage:\n```lua\nhs.loadSpoon(\"Pomodoor\")\nspoon.Pomodoor:start()\n```\n\nOptional hotkeys:\n```lua\nspoon.Pomodoor:bindHotkeys({\n  start = {{\"cmd\", \"alt\", \"ctrl\"}, \"9\"},\n  pause = {{\"cmd\", \"alt\", \"ctrl\"}, \"0\"},\n})\n```\n\nDownload: https:\/\/github.com\/343dev\/hammerspoon",
     "Method" : [
       {
         "doc" : "Play a sound file from Spoon resources.\n\nParameters:\n * filepath - The bundled sound filename to play.\n\nReturns:\n * The Pomodoor object",

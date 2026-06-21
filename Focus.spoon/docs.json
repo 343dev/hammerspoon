@@ -23,7 +23,7 @@
     "Constructor" : [
 
     ],
-    "doc" : "Timer with customizable focus and break intervals.\n\nUsage:\n```lua\nhs.loadSpoon(\"Focus\")\nspoon.Focus:start({\n  focusTime = 55,\n  breakTime = 5,\n  postponeTime = 5,\n  playSound = true,\n  showTimer = true,\n  hotkeys = {\n    toggleFlow = {{\"cmd\", \"alt\", \"ctrl\"}, \"f\"},\n    takeBreak = {{\"cmd\", \"alt\", \"ctrl\"}, \"b\"},\n  },\n})\n```\n\nDownload: https:\/\/github.com\/343dev\/spoons",
+    "doc" : "Timer with customizable focus and break intervals.\n\nUsage:\n```lua\nhs.loadSpoon(\"Focus\")\nspoon.Focus:start({\n  focusTime = 55,\n  breakTime = 5,\n  postponeTime = 5,\n  playSound = true,\n  showTimer = true,\n  hotkeys = {\n    toggleFlow = {{\"cmd\", \"alt\", \"ctrl\"}, \"f\"},\n    takeBreak = {{\"cmd\", \"alt\", \"ctrl\"}, \"b\"},\n  },\n})\n```\n\nDownload: https:\/\/github.com\/343dev\/hammerspoon",
     "Method" : [
       {
         "doc" : "Initializes the Focus Spoon.\n\nParameters:\n * None\n\nReturns:\n * The Focus object",

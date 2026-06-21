@@ -449,7 +449,7 @@
     "Constructor" : [
 
     ],
-    "doc" : "Keyboard-driven UI for gopass: search password-store entries, decrypt via\npinentry, then type or copy selected fields.\n\nUsage:\n```lua\nhs.loadSpoon(\"Gopass\")\nspoon.Gopass:start()\n-- or configure at start:\nspoon.Gopass:start({ defaultHotkeys = { show = {{\"cmd\", \"alt\"}, \"p\"} } })\n```\n\nDownload: https:\/\/github.com\/343dev\/spoons",
+    "doc" : "Keyboard-driven UI for gopass: search password-store entries, decrypt via\npinentry, then type or copy selected fields.\n\nUsage:\n```lua\nhs.loadSpoon(\"Gopass\")\nspoon.Gopass:start()\n-- or configure at start:\nspoon.Gopass:start({ defaultHotkeys = { show = {{\"cmd\", \"alt\"}, \"p\"} } })\n```\n\nDownload: https:\/\/github.com\/343dev\/hammerspoon",
     "Method" : [
       {
         "doc" : "Prepares the Spoon. Called automatically by hs.loadSpoon().\n\nThis method does not start tasks, timers, watchers, or bind hotkeys; call\nstart() to activate the Spoon.\n\nParameters:\n * None\n\nReturns:\n * The Gopass object",

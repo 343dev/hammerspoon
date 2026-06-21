@@ -82,7 +82,7 @@
     "Constructor" : [
 
     ],
-    "doc" : "Display active Time Machine backup progress in the menubar.\n\nTimeMachine polls macOS `tmutil status` and shows a compact two-line menubar\nitem only while a Time Machine backup is running. The menubar item displays\nbackup progress and estimated remaining time when available.\n\nUsage:\n```lua\nhs.loadSpoon(\"TimeMachine\")\nspoon.TimeMachine:start()\n```\n\nOptional hotkeys:\n```lua\nspoon.TimeMachine:bindHotkeys({\n  check = {{\"cmd\", \"alt\", \"ctrl\"}, \"t\"},\n  openPreferences = {{\"cmd\", \"alt\", \"ctrl\"}, \"b\"},\n})\n```\n\nDownload: https:\/\/github.com\/343dev\/spoons",
+    "doc" : "Display active Time Machine backup progress in the menubar.\n\nTimeMachine polls macOS `tmutil status` and shows a compact two-line menubar\nitem only while a Time Machine backup is running. The menubar item displays\nbackup progress and estimated remaining time when available.\n\nUsage:\n```lua\nhs.loadSpoon(\"TimeMachine\")\nspoon.TimeMachine:start()\n```\n\nOptional hotkeys:\n```lua\nspoon.TimeMachine:bindHotkeys({\n  check = {{\"cmd\", \"alt\", \"ctrl\"}, \"t\"},\n  openPreferences = {{\"cmd\", \"alt\", \"ctrl\"}, \"b\"},\n})\n```\n\nDownload: https:\/\/github.com\/343dev\/hammerspoon",
     "Method" : [
       {
         "doc" : "Run one Time Machine status check immediately.\n\nParameters:\n * None\n\nReturns:\n * The TimeMachine object",
