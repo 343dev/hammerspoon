@@ -16,7 +16,7 @@
           "URLs used to check internet connectivity. Requests are made in parallel and",
           "the first HTTP 200 or 204 response is treated as success."
         ],
-        "name" : "checkUrls",
+        "def" : "InternetWatcher.checkUrls",
         "desc" : "URLs used to check internet connectivity. Requests are made in parallel and",
         "notes" : [
 
@@ -26,7 +26,7 @@
         "returns" : [
 
         ],
-        "def" : "InternetWatcher.checkUrls",
+        "name" : "checkUrls",
         "parameters" : [
 
         ]
@@ -37,7 +37,7 @@
           "Maximum time, in seconds, to wait for connectivity checks before treating the",
           "attempt as failed."
         ],
-        "name" : "timeout",
+        "def" : "InternetWatcher.timeout",
         "desc" : "Maximum time, in seconds, to wait for connectivity checks before treating the",
         "notes" : [
 
@@ -47,7 +47,7 @@
         "returns" : [
 
         ],
-        "def" : "InternetWatcher.timeout",
+        "name" : "timeout",
         "parameters" : [
 
         ]
@@ -57,7 +57,7 @@
         "stripped_doc" : [
           "Interval, in seconds, between connectivity checks while the Spoon is running."
         ],
-        "name" : "checkInterval",
+        "def" : "InternetWatcher.checkInterval",
         "desc" : "Interval, in seconds, between connectivity checks while the Spoon is running.",
         "notes" : [
 
@@ -67,7 +67,7 @@
         "returns" : [
 
         ],
-        "def" : "InternetWatcher.checkInterval",
+        "name" : "checkInterval",
         "parameters" : [
 
         ]
@@ -78,7 +78,7 @@
           "Number of consecutive failed checks required before the connection is treated",
           "as offline."
         ],
-        "name" : "failureThreshold",
+        "def" : "InternetWatcher.failureThreshold",
         "desc" : "Number of consecutive failed checks required before the connection is treated",
         "notes" : [
 
@@ -88,7 +88,7 @@
         "returns" : [
 
         ],
-        "def" : "InternetWatcher.failureThreshold",
+        "name" : "failureThreshold",
         "parameters" : [
 
         ]
@@ -98,7 +98,7 @@
         "stripped_doc" : [
           "Whether status sounds should be suppressed while macOS Focus mode appears active."
         ],
-        "name" : "suppressSoundsInFocus",
+        "def" : "InternetWatcher.suppressSoundsInFocus",
         "desc" : "Whether status sounds should be suppressed while macOS Focus mode appears active.",
         "notes" : [
 
@@ -108,7 +108,7 @@
         "returns" : [
 
         ],
-        "def" : "InternetWatcher.suppressSoundsInFocus",
+        "name" : "suppressSoundsInFocus",
         "parameters" : [
 
         ]
@@ -133,7 +133,7 @@
           "Run one internet connectivity check immediately.",
           ""
         ],
-        "name" : "check",
+        "def" : "InternetWatcher:check()",
         "desc" : "Run one internet connectivity check immediately.",
         "notes" : [
 
@@ -143,7 +143,7 @@
         "returns" : [
           " * The InternetWatcher object"
         ],
-        "def" : "InternetWatcher:check()",
+        "name" : "check",
         "parameters" : [
           " * None",
           ""
@@ -155,7 +155,7 @@
           "Show current InternetWatcher state in Hammerspoon Console and the Hammerspoon log.",
           ""
         ],
-        "name" : "showStatus",
+        "def" : "InternetWatcher:showStatus()",
         "desc" : "Show current InternetWatcher state in Hammerspoon Console and the Hammerspoon log.",
         "notes" : [
 
@@ -165,7 +165,7 @@
         "returns" : [
           " * The InternetWatcher object"
         ],
-        "def" : "InternetWatcher:showStatus()",
+        "name" : "showStatus",
         "parameters" : [
           " * None",
           ""
@@ -177,7 +177,7 @@
           "Start monitoring internet connectivity.",
           ""
         ],
-        "name" : "start",
+        "def" : "InternetWatcher:start()",
         "desc" : "Start monitoring internet connectivity.",
         "notes" : [
 
@@ -187,7 +187,7 @@
         "returns" : [
           " * The InternetWatcher object"
         ],
-        "def" : "InternetWatcher:start()",
+        "name" : "start",
         "parameters" : [
           " * None",
           ""
@@ -199,7 +199,7 @@
           "Stop monitoring internet connectivity and clean up resources.",
           ""
         ],
-        "name" : "stop",
+        "def" : "InternetWatcher:stop()",
         "desc" : "Stop monitoring internet connectivity and clean up resources.",
         "notes" : [
 
@@ -209,7 +209,7 @@
         "returns" : [
           " * The InternetWatcher object"
         ],
-        "def" : "InternetWatcher:stop()",
+        "name" : "stop",
         "parameters" : [
           " * None",
           ""
@@ -228,7 +228,7 @@
         "stripped_doc" : [
           "Interval, in seconds, between connectivity checks while the Spoon is running."
         ],
-        "name" : "checkInterval",
+        "def" : "InternetWatcher.checkInterval",
         "desc" : "Interval, in seconds, between connectivity checks while the Spoon is running.",
         "notes" : [
 
@@ -238,7 +238,7 @@
         "returns" : [
 
         ],
-        "def" : "InternetWatcher.checkInterval",
+        "name" : "checkInterval",
         "parameters" : [
 
         ]
@@ -249,7 +249,7 @@
           "URLs used to check internet connectivity. Requests are made in parallel and",
           "the first HTTP 200 or 204 response is treated as success."
         ],
-        "name" : "checkUrls",
+        "def" : "InternetWatcher.checkUrls",
         "desc" : "URLs used to check internet connectivity. Requests are made in parallel and",
         "notes" : [
 
@@ -259,7 +259,7 @@
         "returns" : [
 
         ],
-        "def" : "InternetWatcher.checkUrls",
+        "name" : "checkUrls",
         "parameters" : [
 
         ]
@@ -270,7 +270,7 @@
           "Number of consecutive failed checks required before the connection is treated",
           "as offline."
         ],
-        "name" : "failureThreshold",
+        "def" : "InternetWatcher.failureThreshold",
         "desc" : "Number of consecutive failed checks required before the connection is treated",
         "notes" : [
 
@@ -280,7 +280,7 @@
         "returns" : [
 
         ],
-        "def" : "InternetWatcher.failureThreshold",
+        "name" : "failureThreshold",
         "parameters" : [
 
         ]
@@ -290,7 +290,7 @@
         "stripped_doc" : [
           "Whether status sounds should be suppressed while macOS Focus mode appears active."
         ],
-        "name" : "suppressSoundsInFocus",
+        "def" : "InternetWatcher.suppressSoundsInFocus",
         "desc" : "Whether status sounds should be suppressed while macOS Focus mode appears active.",
         "notes" : [
 
@@ -300,7 +300,7 @@
         "returns" : [
 
         ],
-        "def" : "InternetWatcher.suppressSoundsInFocus",
+        "name" : "suppressSoundsInFocus",
         "parameters" : [
 
         ]
@@ -311,7 +311,7 @@
           "Maximum time, in seconds, to wait for connectivity checks before treating the",
           "attempt as failed."
         ],
-        "name" : "timeout",
+        "def" : "InternetWatcher.timeout",
         "desc" : "Maximum time, in seconds, to wait for connectivity checks before treating the",
         "notes" : [
 
@@ -321,7 +321,7 @@
         "returns" : [
 
         ],
-        "def" : "InternetWatcher.timeout",
+        "name" : "timeout",
         "parameters" : [
 
         ]
@@ -332,7 +332,7 @@
           "Run one internet connectivity check immediately.",
           ""
         ],
-        "name" : "check",
+        "def" : "InternetWatcher:check()",
         "desc" : "Run one internet connectivity check immediately.",
         "notes" : [
 
@@ -342,7 +342,7 @@
         "returns" : [
           " * The InternetWatcher object"
         ],
-        "def" : "InternetWatcher:check()",
+        "name" : "check",
         "parameters" : [
           " * None",
           ""
@@ -354,7 +354,7 @@
           "Show current InternetWatcher state in Hammerspoon Console and the Hammerspoon log.",
           ""
         ],
-        "name" : "showStatus",
+        "def" : "InternetWatcher:showStatus()",
         "desc" : "Show current InternetWatcher state in Hammerspoon Console and the Hammerspoon log.",
         "notes" : [
 
@@ -364,7 +364,7 @@
         "returns" : [
           " * The InternetWatcher object"
         ],
-        "def" : "InternetWatcher:showStatus()",
+        "name" : "showStatus",
         "parameters" : [
           " * None",
           ""
@@ -376,7 +376,7 @@
           "Start monitoring internet connectivity.",
           ""
         ],
-        "name" : "start",
+        "def" : "InternetWatcher:start()",
         "desc" : "Start monitoring internet connectivity.",
         "notes" : [
 
@@ -386,7 +386,7 @@
         "returns" : [
           " * The InternetWatcher object"
         ],
-        "def" : "InternetWatcher:start()",
+        "name" : "start",
         "parameters" : [
           " * None",
           ""
@@ -398,7 +398,7 @@
           "Stop monitoring internet connectivity and clean up resources.",
           ""
         ],
-        "name" : "stop",
+        "def" : "InternetWatcher:stop()",
         "desc" : "Stop monitoring internet connectivity and clean up resources.",
         "notes" : [
 
@@ -408,7 +408,7 @@
         "returns" : [
           " * The InternetWatcher object"
         ],
-        "def" : "InternetWatcher:stop()",
+        "name" : "stop",
         "parameters" : [
           " * None",
           ""

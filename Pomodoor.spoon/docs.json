@@ -12,11 +12,11 @@
     "Variable" : [
       {
         "doc" : "Work session duration, in seconds. Default: 1500 (25 minutes).",
-        "desc" : "Work session duration, in seconds. Default: 1500 (25 minutes).",
-        "def" : "Pomodoor.workingTime",
         "stripped_doc" : [
           "Work session duration, in seconds. Default: 1500 (25 minutes)."
         ],
+        "def" : "Pomodoor.workingTime",
+        "desc" : "Work session duration, in seconds. Default: 1500 (25 minutes).",
         "notes" : [
 
         ],
@@ -32,11 +32,11 @@
       },
       {
         "doc" : "Short break duration, in seconds. Default: 300 (5 minutes).",
-        "desc" : "Short break duration, in seconds. Default: 300 (5 minutes).",
-        "def" : "Pomodoor.breakTime",
         "stripped_doc" : [
           "Short break duration, in seconds. Default: 300 (5 minutes)."
         ],
+        "def" : "Pomodoor.breakTime",
+        "desc" : "Short break duration, in seconds. Default: 300 (5 minutes).",
         "notes" : [
 
         ],
@@ -52,11 +52,11 @@
       },
       {
         "doc" : "Long break duration, in seconds. Default: 1800 (30 minutes).",
-        "desc" : "Long break duration, in seconds. Default: 1800 (30 minutes).",
-        "def" : "Pomodoor.longBreakTime",
         "stripped_doc" : [
           "Long break duration, in seconds. Default: 1800 (30 minutes)."
         ],
+        "def" : "Pomodoor.longBreakTime",
+        "desc" : "Long break duration, in seconds. Default: 1800 (30 minutes).",
         "notes" : [
 
         ],
@@ -72,11 +72,11 @@
       },
       {
         "doc" : "Number of completed work sessions between long breaks. Default: 6.",
-        "desc" : "Number of completed work sessions between long breaks. Default: 6.",
-        "def" : "Pomodoor.longBreakEach",
         "stripped_doc" : [
           "Number of completed work sessions between long breaks. Default: 6."
         ],
+        "def" : "Pomodoor.longBreakEach",
+        "desc" : "Number of completed work sessions between long breaks. Default: 6.",
         "notes" : [
 
         ],
@@ -92,11 +92,11 @@
       },
       {
         "doc" : "Bundled sound file played when a break starts.",
-        "desc" : "Bundled sound file played when a break starts.",
-        "def" : "Pomodoor.breakSound",
         "stripped_doc" : [
           "Bundled sound file played when a break starts."
         ],
+        "def" : "Pomodoor.breakSound",
+        "desc" : "Bundled sound file played when a break starts.",
         "notes" : [
 
         ],
@@ -112,11 +112,11 @@
       },
       {
         "doc" : "Bundled sound file played when work should resume.",
-        "desc" : "Bundled sound file played when work should resume.",
-        "def" : "Pomodoor.workSound",
         "stripped_doc" : [
           "Bundled sound file played when work should resume."
         ],
+        "def" : "Pomodoor.workSound",
+        "desc" : "Bundled sound file played when work should resume.",
         "notes" : [
 
         ],
@@ -132,11 +132,11 @@
       },
       {
         "doc" : "Whether to open Raycast confetti when a work session completes. Default: true.",
-        "desc" : "Whether to open Raycast confetti when a work session completes. Default: true.",
-        "def" : "Pomodoor.showRaycastConfetti",
         "stripped_doc" : [
           "Whether to open Raycast confetti when a work session completes. Default: true."
         ],
+        "def" : "Pomodoor.showRaycastConfetti",
+        "desc" : "Whether to open Raycast confetti when a work session completes. Default: true.",
         "notes" : [
 
         ],
@@ -152,11 +152,11 @@
       },
       {
         "doc" : "Default hotkey mapping. Used only if explicitly passed to bindHotkeys().",
-        "desc" : "Default hotkey mapping. Used only if explicitly passed to bindHotkeys().",
-        "def" : "Pomodoor.defaultHotkeys",
         "stripped_doc" : [
           "Default hotkey mapping. Used only if explicitly passed to bindHotkeys()."
         ],
+        "def" : "Pomodoor.defaultHotkeys",
+        "desc" : "Default hotkey mapping. Used only if explicitly passed to bindHotkeys().",
         "notes" : [
 
         ],
@@ -177,8 +177,8 @@
     "Deprecated" : [
 
     ],
-    "desc" : "Pomodoro timer with work\/break cycles.",
     "type" : "Module",
+    "desc" : "Pomodoro timer with work\/break cycles.",
     "Constructor" : [
 
     ],
@@ -186,166 +186,173 @@
     "Method" : [
       {
         "doc" : "Play a sound file from Spoon resources.\n\nParameters:\n * filepath - The bundled sound filename to play.\n\nReturns:\n * The Pomodoor object",
-        "desc" : "Play a sound file from Spoon resources.",
-        "def" : "Pomodoor:playSound(filepath)",
         "stripped_doc" : [
           "Play a sound file from Spoon resources.",
           ""
         ],
+        "def" : "Pomodoor:playSound(filepath)",
+        "desc" : "Play a sound file from Spoon resources.",
         "notes" : [
 
         ],
         "signature" : "Pomodoor:playSound(filepath)",
         "type" : "Method",
         "returns" : [
-          "The Pomodoor object"
+          " * The Pomodoor object"
         ],
         "name" : "playSound",
         "parameters" : [
-          "filepath - The bundled sound filename to play."
+          " * filepath - The bundled sound filename to play.",
+          ""
         ]
       },
       {
         "doc" : "Show an alert on screen.\n\nParameters:\n * message - The message to display.\n\nReturns:\n * The Pomodoor object",
-        "desc" : "Show an alert on screen.",
-        "def" : "Pomodoor:showAlert(message)",
         "stripped_doc" : [
           "Show an alert on screen.",
           ""
         ],
+        "def" : "Pomodoor:showAlert(message)",
+        "desc" : "Show an alert on screen.",
         "notes" : [
 
         ],
         "signature" : "Pomodoor:showAlert(message)",
         "type" : "Method",
         "returns" : [
-          "The Pomodoor object"
+          " * The Pomodoor object"
         ],
         "name" : "showAlert",
         "parameters" : [
-          "message - The message to display."
+          " * message - The message to display.",
+          ""
         ]
       },
       {
         "doc" : "Show confetti via Raycast.\n\nParameters:\n * None\n\nReturns:\n * The Pomodoor object",
-        "desc" : "Show confetti via Raycast.",
-        "def" : "Pomodoor:showConfetti()",
         "stripped_doc" : [
           "Show confetti via Raycast.",
           ""
         ],
+        "def" : "Pomodoor:showConfetti()",
+        "desc" : "Show confetti via Raycast.",
         "notes" : [
 
         ],
         "signature" : "Pomodoor:showConfetti()",
         "type" : "Method",
         "returns" : [
-          "The Pomodoor object"
+          " * The Pomodoor object"
         ],
         "name" : "showConfetti",
         "parameters" : [
-          "None"
+          " * None",
+          ""
         ]
       },
       {
         "doc" : "Update the menubar title and tooltip.\n\nParameters:\n * None\n\nReturns:\n * The Pomodoor object",
-        "desc" : "Update the menubar title and tooltip.",
-        "def" : "Pomodoor:updateMenu()",
         "stripped_doc" : [
           "Update the menubar title and tooltip.",
           ""
         ],
+        "def" : "Pomodoor:updateMenu()",
+        "desc" : "Update the menubar title and tooltip.",
         "notes" : [
 
         ],
         "signature" : "Pomodoor:updateMenu()",
         "type" : "Method",
         "returns" : [
-          "The Pomodoor object"
+          " * The Pomodoor object"
         ],
         "name" : "updateMenu",
         "parameters" : [
-          "None"
+          " * None",
+          ""
         ]
       },
       {
         "doc" : "Start the countdown timer.\n\nParameters:\n * None\n\nReturns:\n * The Pomodoor object",
-        "desc" : "Start the countdown timer.",
-        "def" : "Pomodoor:startTimer()",
         "stripped_doc" : [
           "Start the countdown timer.",
           ""
         ],
+        "def" : "Pomodoor:startTimer()",
+        "desc" : "Start the countdown timer.",
         "notes" : [
 
         ],
         "signature" : "Pomodoor:startTimer()",
         "type" : "Method",
         "returns" : [
-          "The Pomodoor object"
+          " * The Pomodoor object"
         ],
         "name" : "startTimer",
         "parameters" : [
-          "None"
+          " * None",
+          ""
         ]
       },
       {
         "doc" : "Stop the countdown timer.\n\nParameters:\n * None\n\nReturns:\n * The Pomodoor object",
-        "desc" : "Stop the countdown timer.",
-        "def" : "Pomodoor:stopTimer()",
         "stripped_doc" : [
           "Stop the countdown timer.",
           ""
         ],
+        "def" : "Pomodoor:stopTimer()",
+        "desc" : "Stop the countdown timer.",
         "notes" : [
 
         ],
         "signature" : "Pomodoor:stopTimer()",
         "type" : "Method",
         "returns" : [
-          "The Pomodoor object"
+          " * The Pomodoor object"
         ],
         "name" : "stopTimer",
         "parameters" : [
-          "None"
+          " * None",
+          ""
         ]
       },
       {
         "doc" : "Timer callback called every second.\n\nParameters:\n * None\n\nReturns:\n * None",
-        "desc" : "Timer callback called every second.",
-        "def" : "Pomodoor:timerTick()",
         "stripped_doc" : [
           "Timer callback called every second.",
           ""
         ],
+        "def" : "Pomodoor:timerTick()",
+        "desc" : "Timer callback called every second.",
         "notes" : [
 
         ],
         "signature" : "Pomodoor:timerTick()",
         "type" : "Method",
         "returns" : [
-          "None"
+          " * None"
         ],
         "name" : "timerTick",
         "parameters" : [
-          "None"
+          " * None",
+          ""
         ]
       },
       {
         "doc" : "Start or resume the timer\n\nReturns:\n * The Pomodoor object",
-        "desc" : "Start or resume the timer",
-        "def" : "Pomodoor:start()",
         "stripped_doc" : [
           "Start or resume the timer",
           ""
         ],
+        "def" : "Pomodoor:start()",
+        "desc" : "Start or resume the timer",
         "notes" : [
 
         ],
         "signature" : "Pomodoor:start()",
         "type" : "Method",
         "returns" : [
-          "The Pomodoor object"
+          " * The Pomodoor object"
         ],
         "name" : "start",
         "parameters" : [
@@ -354,114 +361,581 @@
       },
       {
         "doc" : "Pause the active timer without resetting the remaining time. When the current\nwork or break session is already paused, reset it.\n\nParameters:\n * None\n\nReturns:\n * The Pomodoor object",
-        "desc" : "Pause the active timer without resetting the remaining time. When the current",
-        "def" : "Pomodoor:pause()",
         "stripped_doc" : [
           "Pause the active timer without resetting the remaining time. When the current",
           "work or break session is already paused, reset it.",
           ""
         ],
+        "def" : "Pomodoor:pause()",
+        "desc" : "Pause the active timer without resetting the remaining time. When the current",
         "notes" : [
 
         ],
         "signature" : "Pomodoor:pause()",
         "type" : "Method",
         "returns" : [
-          "The Pomodoor object"
+          " * The Pomodoor object"
         ],
         "name" : "pause",
         "parameters" : [
-          "None"
+          " * None",
+          ""
         ]
       },
       {
         "doc" : "Stop the Spoon, reset the current session, and remove background activity.\n\nParameters:\n * None\n\nReturns:\n * The Pomodoor object",
-        "desc" : "Stop the Spoon, reset the current session, and remove background activity.",
-        "def" : "Pomodoor:stop()",
         "stripped_doc" : [
           "Stop the Spoon, reset the current session, and remove background activity.",
           ""
         ],
+        "def" : "Pomodoor:stop()",
+        "desc" : "Stop the Spoon, reset the current session, and remove background activity.",
         "notes" : [
 
         ],
         "signature" : "Pomodoor:stop()",
         "type" : "Method",
         "returns" : [
-          "The Pomodoor object"
+          " * The Pomodoor object"
         ],
         "name" : "stop",
         "parameters" : [
-          "None"
+          " * None",
+          ""
         ]
       },
       {
         "doc" : "Initialize the Spoon. Called automatically by hs.loadSpoon().\n\nDoes not start timers\/watchers or bind hotkeys; call start() and\nbindHotkeys() explicitly.\n\nParameters:\n * None\n\nReturns:\n * The Pomodoor object",
-        "desc" : "Initialize the Spoon. Called automatically by hs.loadSpoon().",
-        "def" : "Pomodoor:init()",
         "stripped_doc" : [
           "Initialize the Spoon. Called automatically by hs.loadSpoon().",
+          "",
+          "Does not start timers\/watchers or bind hotkeys; call start() and",
+          "bindHotkeys() explicitly.",
           ""
         ],
+        "def" : "Pomodoor:init()",
+        "desc" : "Initialize the Spoon. Called automatically by hs.loadSpoon().",
         "notes" : [
 
         ],
         "signature" : "Pomodoor:init()",
         "type" : "Method",
         "returns" : [
-          "The Pomodoor object"
+          " * The Pomodoor object"
         ],
         "name" : "init",
         "parameters" : [
-          "None"
+          " * None",
+          ""
         ]
       },
       {
         "doc" : "Bind hotkeys for Pomodoor actions.\n\nSupported actions are `start`, `pause`, and `stop`.\n\nParameters:\n * mapping - A table containing hotkey specs, for example:\n   `{ start={{\"cmd\", \"alt\", \"ctrl\"}, \"9\"}, pause={{\"cmd\", \"alt\", \"ctrl\"}, \"0\"} }`\n\nReturns:\n * The Pomodoor object",
-        "desc" : "Bind hotkeys for Pomodoor actions.",
-        "def" : "Pomodoor:bindHotkeys(mapping)",
         "stripped_doc" : [
           "Bind hotkeys for Pomodoor actions.",
+          "",
+          "Supported actions are `start`, `pause`, and `stop`.",
           ""
         ],
+        "def" : "Pomodoor:bindHotkeys(mapping)",
+        "desc" : "Bind hotkeys for Pomodoor actions.",
         "notes" : [
 
         ],
         "signature" : "Pomodoor:bindHotkeys(mapping)",
         "type" : "Method",
         "returns" : [
-          "The Pomodoor object"
+          " * The Pomodoor object"
         ],
         "name" : "bindHotkeys",
         "parameters" : [
-          "mapping - A table containing hotkey specs, for example:",
-          "`{ start={{\"cmd\", \"alt\", \"ctrl\"}, \"9\"}, pause={{\"cmd\", \"alt\", \"ctrl\"}, \"0\"} }`"
+          " * mapping - A table containing hotkey specs, for example:",
+          "   `{ start={{\"cmd\", \"alt\", \"ctrl\"}, \"9\"}, pause={{\"cmd\", \"alt\", \"ctrl\"}, \"0\"} }`",
+          ""
         ]
       },
       {
         "doc" : "Cleanup resources. Alias for stop().\n\nParameters:\n * None\n\nReturns:\n * The Pomodoor object",
-        "desc" : "Cleanup resources. Alias for stop().",
-        "def" : "Pomodoor:cleanup()",
         "stripped_doc" : [
           "Cleanup resources. Alias for stop().",
           ""
         ],
+        "def" : "Pomodoor:cleanup()",
+        "desc" : "Cleanup resources. Alias for stop().",
         "notes" : [
 
         ],
         "signature" : "Pomodoor:cleanup()",
         "type" : "Method",
         "returns" : [
-          "The Pomodoor object"
+          " * The Pomodoor object"
         ],
         "name" : "cleanup",
         "parameters" : [
-          "None"
+          " * None",
+          ""
         ]
       }
     ],
-    "items" : [
+    "Command" : [
 
+    ],
+    "Field" : [
+
+    ],
+    "items" : [
+      {
+        "doc" : "Bundled sound file played when a break starts.",
+        "stripped_doc" : [
+          "Bundled sound file played when a break starts."
+        ],
+        "def" : "Pomodoor.breakSound",
+        "desc" : "Bundled sound file played when a break starts.",
+        "notes" : [
+
+        ],
+        "signature" : "Pomodoor.breakSound",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "breakSound",
+        "parameters" : [
+
+        ]
+      },
+      {
+        "doc" : "Short break duration, in seconds. Default: 300 (5 minutes).",
+        "stripped_doc" : [
+          "Short break duration, in seconds. Default: 300 (5 minutes)."
+        ],
+        "def" : "Pomodoor.breakTime",
+        "desc" : "Short break duration, in seconds. Default: 300 (5 minutes).",
+        "notes" : [
+
+        ],
+        "signature" : "Pomodoor.breakTime",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "breakTime",
+        "parameters" : [
+
+        ]
+      },
+      {
+        "doc" : "Default hotkey mapping. Used only if explicitly passed to bindHotkeys().",
+        "stripped_doc" : [
+          "Default hotkey mapping. Used only if explicitly passed to bindHotkeys()."
+        ],
+        "def" : "Pomodoor.defaultHotkeys",
+        "desc" : "Default hotkey mapping. Used only if explicitly passed to bindHotkeys().",
+        "notes" : [
+
+        ],
+        "signature" : "Pomodoor.defaultHotkeys",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "defaultHotkeys",
+        "parameters" : [
+
+        ]
+      },
+      {
+        "doc" : "Number of completed work sessions between long breaks. Default: 6.",
+        "stripped_doc" : [
+          "Number of completed work sessions between long breaks. Default: 6."
+        ],
+        "def" : "Pomodoor.longBreakEach",
+        "desc" : "Number of completed work sessions between long breaks. Default: 6.",
+        "notes" : [
+
+        ],
+        "signature" : "Pomodoor.longBreakEach",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "longBreakEach",
+        "parameters" : [
+
+        ]
+      },
+      {
+        "doc" : "Long break duration, in seconds. Default: 1800 (30 minutes).",
+        "stripped_doc" : [
+          "Long break duration, in seconds. Default: 1800 (30 minutes)."
+        ],
+        "def" : "Pomodoor.longBreakTime",
+        "desc" : "Long break duration, in seconds. Default: 1800 (30 minutes).",
+        "notes" : [
+
+        ],
+        "signature" : "Pomodoor.longBreakTime",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "longBreakTime",
+        "parameters" : [
+
+        ]
+      },
+      {
+        "doc" : "Whether to open Raycast confetti when a work session completes. Default: true.",
+        "stripped_doc" : [
+          "Whether to open Raycast confetti when a work session completes. Default: true."
+        ],
+        "def" : "Pomodoor.showRaycastConfetti",
+        "desc" : "Whether to open Raycast confetti when a work session completes. Default: true.",
+        "notes" : [
+
+        ],
+        "signature" : "Pomodoor.showRaycastConfetti",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "showRaycastConfetti",
+        "parameters" : [
+
+        ]
+      },
+      {
+        "doc" : "Bundled sound file played when work should resume.",
+        "stripped_doc" : [
+          "Bundled sound file played when work should resume."
+        ],
+        "def" : "Pomodoor.workSound",
+        "desc" : "Bundled sound file played when work should resume.",
+        "notes" : [
+
+        ],
+        "signature" : "Pomodoor.workSound",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "workSound",
+        "parameters" : [
+
+        ]
+      },
+      {
+        "doc" : "Work session duration, in seconds. Default: 1500 (25 minutes).",
+        "stripped_doc" : [
+          "Work session duration, in seconds. Default: 1500 (25 minutes)."
+        ],
+        "def" : "Pomodoor.workingTime",
+        "desc" : "Work session duration, in seconds. Default: 1500 (25 minutes).",
+        "notes" : [
+
+        ],
+        "signature" : "Pomodoor.workingTime",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "workingTime",
+        "parameters" : [
+
+        ]
+      },
+      {
+        "doc" : "Bind hotkeys for Pomodoor actions.\n\nSupported actions are `start`, `pause`, and `stop`.\n\nParameters:\n * mapping - A table containing hotkey specs, for example:\n   `{ start={{\"cmd\", \"alt\", \"ctrl\"}, \"9\"}, pause={{\"cmd\", \"alt\", \"ctrl\"}, \"0\"} }`\n\nReturns:\n * The Pomodoor object",
+        "stripped_doc" : [
+          "Bind hotkeys for Pomodoor actions.",
+          "",
+          "Supported actions are `start`, `pause`, and `stop`.",
+          ""
+        ],
+        "def" : "Pomodoor:bindHotkeys(mapping)",
+        "desc" : "Bind hotkeys for Pomodoor actions.",
+        "notes" : [
+
+        ],
+        "signature" : "Pomodoor:bindHotkeys(mapping)",
+        "type" : "Method",
+        "returns" : [
+          " * The Pomodoor object"
+        ],
+        "name" : "bindHotkeys",
+        "parameters" : [
+          " * mapping - A table containing hotkey specs, for example:",
+          "   `{ start={{\"cmd\", \"alt\", \"ctrl\"}, \"9\"}, pause={{\"cmd\", \"alt\", \"ctrl\"}, \"0\"} }`",
+          ""
+        ]
+      },
+      {
+        "doc" : "Cleanup resources. Alias for stop().\n\nParameters:\n * None\n\nReturns:\n * The Pomodoor object",
+        "stripped_doc" : [
+          "Cleanup resources. Alias for stop().",
+          ""
+        ],
+        "def" : "Pomodoor:cleanup()",
+        "desc" : "Cleanup resources. Alias for stop().",
+        "notes" : [
+
+        ],
+        "signature" : "Pomodoor:cleanup()",
+        "type" : "Method",
+        "returns" : [
+          " * The Pomodoor object"
+        ],
+        "name" : "cleanup",
+        "parameters" : [
+          " * None",
+          ""
+        ]
+      },
+      {
+        "doc" : "Initialize the Spoon. Called automatically by hs.loadSpoon().\n\nDoes not start timers\/watchers or bind hotkeys; call start() and\nbindHotkeys() explicitly.\n\nParameters:\n * None\n\nReturns:\n * The Pomodoor object",
+        "stripped_doc" : [
+          "Initialize the Spoon. Called automatically by hs.loadSpoon().",
+          "",
+          "Does not start timers\/watchers or bind hotkeys; call start() and",
+          "bindHotkeys() explicitly.",
+          ""
+        ],
+        "def" : "Pomodoor:init()",
+        "desc" : "Initialize the Spoon. Called automatically by hs.loadSpoon().",
+        "notes" : [
+
+        ],
+        "signature" : "Pomodoor:init()",
+        "type" : "Method",
+        "returns" : [
+          " * The Pomodoor object"
+        ],
+        "name" : "init",
+        "parameters" : [
+          " * None",
+          ""
+        ]
+      },
+      {
+        "doc" : "Pause the active timer without resetting the remaining time. When the current\nwork or break session is already paused, reset it.\n\nParameters:\n * None\n\nReturns:\n * The Pomodoor object",
+        "stripped_doc" : [
+          "Pause the active timer without resetting the remaining time. When the current",
+          "work or break session is already paused, reset it.",
+          ""
+        ],
+        "def" : "Pomodoor:pause()",
+        "desc" : "Pause the active timer without resetting the remaining time. When the current",
+        "notes" : [
+
+        ],
+        "signature" : "Pomodoor:pause()",
+        "type" : "Method",
+        "returns" : [
+          " * The Pomodoor object"
+        ],
+        "name" : "pause",
+        "parameters" : [
+          " * None",
+          ""
+        ]
+      },
+      {
+        "doc" : "Play a sound file from Spoon resources.\n\nParameters:\n * filepath - The bundled sound filename to play.\n\nReturns:\n * The Pomodoor object",
+        "stripped_doc" : [
+          "Play a sound file from Spoon resources.",
+          ""
+        ],
+        "def" : "Pomodoor:playSound(filepath)",
+        "desc" : "Play a sound file from Spoon resources.",
+        "notes" : [
+
+        ],
+        "signature" : "Pomodoor:playSound(filepath)",
+        "type" : "Method",
+        "returns" : [
+          " * The Pomodoor object"
+        ],
+        "name" : "playSound",
+        "parameters" : [
+          " * filepath - The bundled sound filename to play.",
+          ""
+        ]
+      },
+      {
+        "doc" : "Show an alert on screen.\n\nParameters:\n * message - The message to display.\n\nReturns:\n * The Pomodoor object",
+        "stripped_doc" : [
+          "Show an alert on screen.",
+          ""
+        ],
+        "def" : "Pomodoor:showAlert(message)",
+        "desc" : "Show an alert on screen.",
+        "notes" : [
+
+        ],
+        "signature" : "Pomodoor:showAlert(message)",
+        "type" : "Method",
+        "returns" : [
+          " * The Pomodoor object"
+        ],
+        "name" : "showAlert",
+        "parameters" : [
+          " * message - The message to display.",
+          ""
+        ]
+      },
+      {
+        "doc" : "Show confetti via Raycast.\n\nParameters:\n * None\n\nReturns:\n * The Pomodoor object",
+        "stripped_doc" : [
+          "Show confetti via Raycast.",
+          ""
+        ],
+        "def" : "Pomodoor:showConfetti()",
+        "desc" : "Show confetti via Raycast.",
+        "notes" : [
+
+        ],
+        "signature" : "Pomodoor:showConfetti()",
+        "type" : "Method",
+        "returns" : [
+          " * The Pomodoor object"
+        ],
+        "name" : "showConfetti",
+        "parameters" : [
+          " * None",
+          ""
+        ]
+      },
+      {
+        "doc" : "Start or resume the timer\n\nReturns:\n * The Pomodoor object",
+        "stripped_doc" : [
+          "Start or resume the timer",
+          ""
+        ],
+        "def" : "Pomodoor:start()",
+        "desc" : "Start or resume the timer",
+        "notes" : [
+
+        ],
+        "signature" : "Pomodoor:start()",
+        "type" : "Method",
+        "returns" : [
+          " * The Pomodoor object"
+        ],
+        "name" : "start",
+        "parameters" : [
+
+        ]
+      },
+      {
+        "doc" : "Start the countdown timer.\n\nParameters:\n * None\n\nReturns:\n * The Pomodoor object",
+        "stripped_doc" : [
+          "Start the countdown timer.",
+          ""
+        ],
+        "def" : "Pomodoor:startTimer()",
+        "desc" : "Start the countdown timer.",
+        "notes" : [
+
+        ],
+        "signature" : "Pomodoor:startTimer()",
+        "type" : "Method",
+        "returns" : [
+          " * The Pomodoor object"
+        ],
+        "name" : "startTimer",
+        "parameters" : [
+          " * None",
+          ""
+        ]
+      },
+      {
+        "doc" : "Stop the Spoon, reset the current session, and remove background activity.\n\nParameters:\n * None\n\nReturns:\n * The Pomodoor object",
+        "stripped_doc" : [
+          "Stop the Spoon, reset the current session, and remove background activity.",
+          ""
+        ],
+        "def" : "Pomodoor:stop()",
+        "desc" : "Stop the Spoon, reset the current session, and remove background activity.",
+        "notes" : [
+
+        ],
+        "signature" : "Pomodoor:stop()",
+        "type" : "Method",
+        "returns" : [
+          " * The Pomodoor object"
+        ],
+        "name" : "stop",
+        "parameters" : [
+          " * None",
+          ""
+        ]
+      },
+      {
+        "doc" : "Stop the countdown timer.\n\nParameters:\n * None\n\nReturns:\n * The Pomodoor object",
+        "stripped_doc" : [
+          "Stop the countdown timer.",
+          ""
+        ],
+        "def" : "Pomodoor:stopTimer()",
+        "desc" : "Stop the countdown timer.",
+        "notes" : [
+
+        ],
+        "signature" : "Pomodoor:stopTimer()",
+        "type" : "Method",
+        "returns" : [
+          " * The Pomodoor object"
+        ],
+        "name" : "stopTimer",
+        "parameters" : [
+          " * None",
+          ""
+        ]
+      },
+      {
+        "doc" : "Timer callback called every second.\n\nParameters:\n * None\n\nReturns:\n * None",
+        "stripped_doc" : [
+          "Timer callback called every second.",
+          ""
+        ],
+        "def" : "Pomodoor:timerTick()",
+        "desc" : "Timer callback called every second.",
+        "notes" : [
+
+        ],
+        "signature" : "Pomodoor:timerTick()",
+        "type" : "Method",
+        "returns" : [
+          " * None"
+        ],
+        "name" : "timerTick",
+        "parameters" : [
+          " * None",
+          ""
+        ]
+      },
+      {
+        "doc" : "Update the menubar title and tooltip.\n\nParameters:\n * None\n\nReturns:\n * The Pomodoor object",
+        "stripped_doc" : [
+          "Update the menubar title and tooltip.",
+          ""
+        ],
+        "def" : "Pomodoor:updateMenu()",
+        "desc" : "Update the menubar title and tooltip.",
+        "notes" : [
+
+        ],
+        "signature" : "Pomodoor:updateMenu()",
+        "type" : "Method",
+        "returns" : [
+          " * The Pomodoor object"
+        ],
+        "name" : "updateMenu",
+        "parameters" : [
+          " * None",
+          ""
+        ]
+      }
     ],
     "name" : "Pomodoor"
   }

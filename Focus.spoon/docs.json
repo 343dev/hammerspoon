@@ -1,347 +1,731 @@
 [
   {
-    "Constant": [],
-    "submodules": [],
-    "Function": [],
-    "Variable": [],
-    "stripped_doc": [],
-    "type": "Module",
-    "Deprecated": [],
-    "desc": "Timer with customizable focus and break intervals.",
-    "Constructor": [],
-    "Field": [],
-    "Method": [
+    "Constant" : [
+
+    ],
+    "submodules" : [
+
+    ],
+    "Function" : [
+
+    ],
+    "Variable" : [
+
+    ],
+    "stripped_doc" : [
+
+    ],
+    "Deprecated" : [
+
+    ],
+    "type" : "Module",
+    "desc" : "Timer with customizable focus and break intervals.",
+    "Constructor" : [
+
+    ],
+    "doc" : "Timer with customizable focus and break intervals.\n\nUsage:\n```lua\nhs.loadSpoon(\"Focus\")\nspoon.Focus:start({\n  focusTime = 55,\n  breakTime = 5,\n  postponeTime = 5,\n  playSound = true,\n  showTimer = true,\n  hotkeys = {\n    toggleFlow = {{\"cmd\", \"alt\", \"ctrl\"}, \"f\"},\n    takeBreak = {{\"cmd\", \"alt\", \"ctrl\"}, \"b\"},\n  },\n})\n```\n\nDownload: https:\/\/github.com\/343dev\/spoons",
+    "Method" : [
       {
-        "doc": "Initializes the Focus Spoon.\n\nParameters:\n * None\n\n\nReturns:\n * The Focus object",
-        "stripped_doc": [
+        "doc" : "Initializes the Focus Spoon.\n\nParameters:\n * None\n\nReturns:\n * The Focus object",
+        "stripped_doc" : [
           "Initializes the Focus Spoon.",
           ""
         ],
-        "name": "init",
-        "desc": "Initializes the Focus Spoon.",
-        "notes": [],
-        "signature": "Focus:init()",
-        "type": "Method",
-        "returns": [
+        "def" : "Focus:init()",
+        "desc" : "Initializes the Focus Spoon.",
+        "notes" : [
+
+        ],
+        "signature" : "Focus:init()",
+        "type" : "Method",
+        "returns" : [
           " * The Focus object"
         ],
-        "def": "Focus:init()",
-        "parameters": [
+        "name" : "init",
+        "parameters" : [
           " * None",
-          "",
           ""
         ]
       },
       {
-        "doc": "Toggles flow mode. In flow mode, the focus timer is paused until flow mode is disabled.\n\nParameters:\n * None\n\n\nReturns:\n * The Focus object",
-        "stripped_doc": [
+        "doc" : "Toggles flow mode. In flow mode, the focus timer is paused until flow mode is disabled.\n\nParameters:\n * None\n\nReturns:\n * The Focus object",
+        "stripped_doc" : [
           "Toggles flow mode. In flow mode, the focus timer is paused until flow mode is disabled.",
           ""
         ],
-        "name": "toggleFlow",
-        "desc": "Toggles flow mode. In flow mode, the focus timer is paused until flow mode is disabled.",
-        "notes": [],
-        "signature": "Focus:toggleFlow()",
-        "type": "Method",
-        "returns": [
+        "def" : "Focus:toggleFlow()",
+        "desc" : "Toggles flow mode. In flow mode, the focus timer is paused until flow mode is disabled.",
+        "notes" : [
+
+        ],
+        "signature" : "Focus:toggleFlow()",
+        "type" : "Method",
+        "returns" : [
           " * The Focus object"
         ],
-        "def": "Focus:toggleFlow()",
-        "parameters": [
+        "name" : "toggleFlow",
+        "parameters" : [
           " * None",
-          "",
           ""
         ]
       },
       {
-        "doc": "Starts a break immediately.\n\nParameters:\n * None\n\n\nReturns:\n * The Focus object",
-        "stripped_doc": [
+        "doc" : "Starts a break immediately.\n\nParameters:\n * None\n\nReturns:\n * The Focus object",
+        "stripped_doc" : [
           "Starts a break immediately.",
           ""
         ],
-        "name": "takeBreak",
-        "desc": "Starts a break immediately.",
-        "notes": [],
-        "signature": "Focus:takeBreak()",
-        "type": "Method",
-        "returns": [
+        "def" : "Focus:takeBreak()",
+        "desc" : "Starts a break immediately.",
+        "notes" : [
+
+        ],
+        "signature" : "Focus:takeBreak()",
+        "type" : "Method",
+        "returns" : [
           " * The Focus object"
         ],
-        "def": "Focus:takeBreak()",
-        "parameters": [
+        "name" : "takeBreak",
+        "parameters" : [
           " * None",
-          "",
           ""
         ]
       },
       {
-        "doc": "Configures and starts Focus, including background watchers, the menu bar item, and the focus timer.\n\nParameters:\n * config - An optional table containing startup configuration:\n * focusTime - Focus interval length in minutes\n * breakTime - Break interval length in minutes\n * postponeTime - Postpone duration in minutes\n * playSound - A boolean, true to play sounds, false to disable sounds\n * showTimer - A boolean, true to show the countdown timer, false to hide it\n * hotkeys - A table passed to Focus:bindHotkeys()\n\n\nReturns:\n * The Focus object",
-        "stripped_doc": [
+        "doc" : "Configures and starts Focus, including background watchers, the menu bar item, and the focus timer.\n\nParameters:\n * config - An optional table containing startup configuration:\n   * focusTime - Focus interval length in minutes\n   * breakTime - Break interval length in minutes\n   * postponeTime - Postpone duration in minutes\n   * playSound - A boolean, true to play sounds, false to disable sounds\n   * showTimer - A boolean, true to show the countdown timer, false to hide it\n   * hotkeys - A table passed to Focus:bindHotkeys()\n\nReturns:\n * The Focus object",
+        "stripped_doc" : [
           "Configures and starts Focus, including background watchers, the menu bar item, and the focus timer.",
           ""
         ],
-        "name": "start",
-        "desc": "Configures and starts Focus, including background watchers, the menu bar item, and the focus timer.",
-        "notes": [],
-        "signature": "Focus:start([config])",
-        "type": "Method",
-        "returns": [
+        "def" : "Focus:start([config])",
+        "desc" : "Configures and starts Focus, including background watchers, the menu bar item, and the focus timer.",
+        "notes" : [
+
+        ],
+        "signature" : "Focus:start([config])",
+        "type" : "Method",
+        "returns" : [
           " * The Focus object"
         ],
-        "def": "Focus:start([config])",
-        "parameters": [
+        "name" : "start",
+        "parameters" : [
           " * config - An optional table containing startup configuration:",
-          " * focusTime - Focus interval length in minutes",
-          " * breakTime - Break interval length in minutes",
-          " * postponeTime - Postpone duration in minutes",
-          " * playSound - A boolean, true to play sounds, false to disable sounds",
-          " * showTimer - A boolean, true to show the countdown timer, false to hide it",
-          " * hotkeys - A table passed to Focus:bindHotkeys()",
-          "",
+          "   * focusTime - Focus interval length in minutes",
+          "   * breakTime - Break interval length in minutes",
+          "   * postponeTime - Postpone duration in minutes",
+          "   * playSound - A boolean, true to play sounds, false to disable sounds",
+          "   * showTimer - A boolean, true to show the countdown timer, false to hide it",
+          "   * hotkeys - A table passed to Focus:bindHotkeys()",
           ""
         ]
       },
       {
-        "doc": "Stops Focus and removes all timers, watchers, event taps, overlays, and menu bar items.\n\nParameters:\n * None\n\n\nReturns:\n * The Focus object",
-        "stripped_doc": [
+        "doc" : "Stops Focus and removes all timers, watchers, event taps, overlays, and menu bar items.\n\nParameters:\n * None\n\nReturns:\n * The Focus object",
+        "stripped_doc" : [
           "Stops Focus and removes all timers, watchers, event taps, overlays, and menu bar items.",
           ""
         ],
-        "name": "stop",
-        "desc": "Stops Focus and removes all timers, watchers, event taps, overlays, and menu bar items.",
-        "notes": [],
-        "signature": "Focus:stop()",
-        "type": "Method",
-        "returns": [
+        "def" : "Focus:stop()",
+        "desc" : "Stops Focus and removes all timers, watchers, event taps, overlays, and menu bar items.",
+        "notes" : [
+
+        ],
+        "signature" : "Focus:stop()",
+        "type" : "Method",
+        "returns" : [
           " * The Focus object"
         ],
-        "def": "Focus:stop()",
-        "parameters": [
+        "name" : "stop",
+        "parameters" : [
           " * None",
-          "",
           ""
         ]
       },
       {
-        "doc": "Applies Focus configuration without starting the timer.\n\nParameters:\n * config - An optional table containing configuration values:\n * focusTime - Focus interval length in minutes\n * breakTime - Break interval length in minutes\n * postponeTime - Postpone duration in minutes\n * playSound - A boolean, true to play sounds, false to disable sounds\n * showTimer - A boolean, true to show the countdown timer, false to hide it\n * hotkeys - A table passed to Focus:bindHotkeys()\n\n\nReturns:\n * The Focus object",
-        "stripped_doc": [
+        "doc" : "Applies Focus configuration without starting the timer.\n\nParameters:\n * config - An optional table containing configuration values:\n   * focusTime - Focus interval length in minutes\n   * breakTime - Break interval length in minutes\n   * postponeTime - Postpone duration in minutes\n   * playSound - A boolean, true to play sounds, false to disable sounds\n   * showTimer - A boolean, true to show the countdown timer, false to hide it\n   * hotkeys - A table passed to Focus:bindHotkeys()\n\nReturns:\n * The Focus object",
+        "stripped_doc" : [
           "Applies Focus configuration without starting the timer.",
           ""
         ],
-        "name": "configure",
-        "desc": "Applies Focus configuration without starting the timer.",
-        "notes": [],
-        "signature": "Focus:configure([config])",
-        "type": "Method",
-        "returns": [
+        "def" : "Focus:configure([config])",
+        "desc" : "Applies Focus configuration without starting the timer.",
+        "notes" : [
+
+        ],
+        "signature" : "Focus:configure([config])",
+        "type" : "Method",
+        "returns" : [
           " * The Focus object"
         ],
-        "def": "Focus:configure([config])",
-        "parameters": [
+        "name" : "configure",
+        "parameters" : [
           " * config - An optional table containing configuration values:",
-          " * focusTime - Focus interval length in minutes",
-          " * breakTime - Break interval length in minutes",
-          " * postponeTime - Postpone duration in minutes",
-          " * playSound - A boolean, true to play sounds, false to disable sounds",
-          " * showTimer - A boolean, true to show the countdown timer, false to hide it",
-          " * hotkeys - A table passed to Focus:bindHotkeys()",
-          "",
+          "   * focusTime - Focus interval length in minutes",
+          "   * breakTime - Break interval length in minutes",
+          "   * postponeTime - Postpone duration in minutes",
+          "   * playSound - A boolean, true to play sounds, false to disable sounds",
+          "   * showTimer - A boolean, true to show the countdown timer, false to hide it",
+          "   * hotkeys - A table passed to Focus:bindHotkeys()",
           ""
         ]
       },
       {
-        "doc": "Binds hotkeys for Focus actions.\n\nParameters:\n * mapping - A table containing hotkey definitions for actions. Supported actions are:\n * toggleFlow - Toggle flow mode\n * takeBreak - Start a break immediately\n * start - Start Focus\n * stop - Stop Focus\n\n\nReturns:\n * The Focus object",
-        "stripped_doc": [
+        "doc" : "Binds hotkeys for Focus actions.\n\nParameters:\n * mapping - A table containing hotkey definitions for actions. Supported actions are:\n   * toggleFlow - Toggle flow mode\n   * takeBreak - Start a break immediately\n   * start - Start Focus\n   * stop - Stop Focus\n\nReturns:\n * The Focus object",
+        "stripped_doc" : [
           "Binds hotkeys for Focus actions.",
           ""
         ],
-        "name": "bindHotkeys",
-        "desc": "Binds hotkeys for Focus actions.",
-        "notes": [],
-        "signature": "Focus:bindHotkeys(mapping)",
-        "type": "Method",
-        "returns": [
+        "def" : "Focus:bindHotkeys(mapping)",
+        "desc" : "Binds hotkeys for Focus actions.",
+        "notes" : [
+
+        ],
+        "signature" : "Focus:bindHotkeys(mapping)",
+        "type" : "Method",
+        "returns" : [
           " * The Focus object"
         ],
-        "def": "Focus:bindHotkeys(mapping)",
-        "parameters": [
+        "name" : "bindHotkeys",
+        "parameters" : [
           " * mapping - A table containing hotkey definitions for actions. Supported actions are:",
-          " * toggleFlow - Toggle flow mode",
-          " * takeBreak - Start a break immediately",
-          " * start - Start Focus",
-          " * stop - Stop Focus",
-          "",
+          "   * toggleFlow - Toggle flow mode",
+          "   * takeBreak - Start a break immediately",
+          "   * start - Start Focus",
+          "   * stop - Stop Focus",
           ""
         ]
       },
       {
-        "doc": "Gets the current Focus state.\n\nParameters:\n * None\n\n\nReturns:\n * A table containing the current phase, remaining time, configured durations, flow mode state, and related runtime flags",
-        "stripped_doc": [
+        "doc" : "Gets the current Focus state.\n\nParameters:\n * None\n\nReturns:\n * A table containing the current phase, remaining time, configured durations, flow mode state, and related runtime flags",
+        "stripped_doc" : [
           "Gets the current Focus state.",
           ""
         ],
-        "name": "getStatus",
-        "desc": "Gets the current Focus state.",
-        "notes": [],
-        "signature": "Focus:getStatus()",
-        "type": "Method",
-        "returns": [
+        "def" : "Focus:getStatus()",
+        "desc" : "Gets the current Focus state.",
+        "notes" : [
+
+        ],
+        "signature" : "Focus:getStatus()",
+        "type" : "Method",
+        "returns" : [
           " * A table containing the current phase, remaining time, configured durations, flow mode state, and related runtime flags"
         ],
-        "def": "Focus:getStatus()",
-        "parameters": [
+        "name" : "getStatus",
+        "parameters" : [
           " * None",
-          "",
           ""
         ]
       },
       {
-        "doc": "Sets the focus interval length.\n\nParameters:\n * minutes - A positive number containing the focus interval length in minutes\n\n\nReturns:\n * The Focus object",
-        "stripped_doc": [
+        "doc" : "Sets the focus interval length.\n\nParameters:\n * minutes - A positive number containing the focus interval length in minutes\n\nReturns:\n * The Focus object",
+        "stripped_doc" : [
           "Sets the focus interval length.",
           ""
         ],
-        "name": "setFocusTime",
-        "desc": "Sets the focus interval length.",
-        "notes": [],
-        "signature": "Focus:setFocusTime(minutes)",
-        "type": "Method",
-        "returns": [
+        "def" : "Focus:setFocusTime(minutes)",
+        "desc" : "Sets the focus interval length.",
+        "notes" : [
+
+        ],
+        "signature" : "Focus:setFocusTime(minutes)",
+        "type" : "Method",
+        "returns" : [
           " * The Focus object"
         ],
-        "def": "Focus:setFocusTime(minutes)",
-        "parameters": [
+        "name" : "setFocusTime",
+        "parameters" : [
           " * minutes - A positive number containing the focus interval length in minutes",
-          "",
           ""
         ]
       },
       {
-        "doc": "Sets the break interval length.\n\nParameters:\n * minutes - A positive number containing the break interval length in minutes\n\n\nReturns:\n * The Focus object",
-        "stripped_doc": [
+        "doc" : "Sets the break interval length.\n\nParameters:\n * minutes - A positive number containing the break interval length in minutes\n\nReturns:\n * The Focus object",
+        "stripped_doc" : [
           "Sets the break interval length.",
           ""
         ],
-        "name": "setBreakTime",
-        "desc": "Sets the break interval length.",
-        "notes": [],
-        "signature": "Focus:setBreakTime(minutes)",
-        "type": "Method",
-        "returns": [
+        "def" : "Focus:setBreakTime(minutes)",
+        "desc" : "Sets the break interval length.",
+        "notes" : [
+
+        ],
+        "signature" : "Focus:setBreakTime(minutes)",
+        "type" : "Method",
+        "returns" : [
           " * The Focus object"
         ],
-        "def": "Focus:setBreakTime(minutes)",
-        "parameters": [
+        "name" : "setBreakTime",
+        "parameters" : [
           " * minutes - A positive number containing the break interval length in minutes",
-          "",
           ""
         ]
       },
       {
-        "doc": "Sets the postpone duration.\n\nParameters:\n * minutes - A positive number containing the postpone duration in minutes\n\n\nReturns:\n * The Focus object",
-        "stripped_doc": [
+        "doc" : "Sets the postpone duration.\n\nParameters:\n * minutes - A positive number containing the postpone duration in minutes\n\nReturns:\n * The Focus object",
+        "stripped_doc" : [
           "Sets the postpone duration.",
           ""
         ],
-        "name": "setPostponeTime",
-        "desc": "Sets the postpone duration.",
-        "notes": [],
-        "signature": "Focus:setPostponeTime(minutes)",
-        "type": "Method",
-        "returns": [
+        "def" : "Focus:setPostponeTime(minutes)",
+        "desc" : "Sets the postpone duration.",
+        "notes" : [
+
+        ],
+        "signature" : "Focus:setPostponeTime(minutes)",
+        "type" : "Method",
+        "returns" : [
           " * The Focus object"
         ],
-        "def": "Focus:setPostponeTime(minutes)",
-        "parameters": [
+        "name" : "setPostponeTime",
+        "parameters" : [
           " * minutes - A positive number containing the postpone duration in minutes",
-          "",
           ""
         ]
       },
       {
-        "doc": "Sets the break overlay color.\n\nParameters:\n * color - A color table suitable for hs.canvas fillColor\n\n\nReturns:\n * The Focus object",
-        "stripped_doc": [
+        "doc" : "Sets the break overlay color.\n\nParameters:\n * color - A color table suitable for hs.canvas fillColor\n\nReturns:\n * The Focus object",
+        "stripped_doc" : [
           "Sets the break overlay color.",
           ""
         ],
-        "name": "setOverlayColor",
-        "desc": "Sets the break overlay color.",
-        "notes": [],
-        "signature": "Focus:setOverlayColor(color)",
-        "type": "Method",
-        "returns": [
+        "def" : "Focus:setOverlayColor(color)",
+        "desc" : "Sets the break overlay color.",
+        "notes" : [
+
+        ],
+        "signature" : "Focus:setOverlayColor(color)",
+        "type" : "Method",
+        "returns" : [
           " * The Focus object"
         ],
-        "def": "Focus:setOverlayColor(color)",
-        "parameters": [
+        "name" : "setOverlayColor",
+        "parameters" : [
           " * color - A color table suitable for hs.canvas fillColor",
-          "",
           ""
         ]
       },
       {
-        "doc": "Enables or disables the on-screen countdown timer.\n\nParameters:\n * show - A boolean, true to show the countdown timer, false to hide it\n\n\nReturns:\n * The Focus object",
-        "stripped_doc": [
+        "doc" : "Enables or disables the on-screen countdown timer.\n\nParameters:\n * show - A boolean, true to show the countdown timer, false to hide it\n\nReturns:\n * The Focus object",
+        "stripped_doc" : [
           "Enables or disables the on-screen countdown timer.",
           ""
         ],
-        "name": "setShowTimer",
-        "desc": "Enables or disables the on-screen countdown timer.",
-        "notes": [],
-        "signature": "Focus:setShowTimer(show)",
-        "type": "Method",
-        "returns": [
+        "def" : "Focus:setShowTimer(show)",
+        "desc" : "Enables or disables the on-screen countdown timer.",
+        "notes" : [
+
+        ],
+        "signature" : "Focus:setShowTimer(show)",
+        "type" : "Method",
+        "returns" : [
           " * The Focus object"
         ],
-        "def": "Focus:setShowTimer(show)",
-        "parameters": [
+        "name" : "setShowTimer",
+        "parameters" : [
           " * show - A boolean, true to show the countdown timer, false to hide it",
-          "",
           ""
         ]
       },
       {
-        "doc": "Enables or disables notification sounds.\n\nParameters:\n * play - A boolean, true to play sounds, false to disable sounds\n\n\nReturns:\n * The Focus object",
-        "stripped_doc": [
+        "doc" : "Enables or disables notification sounds.\n\nParameters:\n * play - A boolean, true to play sounds, false to disable sounds\n\nReturns:\n * The Focus object",
+        "stripped_doc" : [
           "Enables or disables notification sounds.",
           ""
         ],
-        "name": "setPlaySound",
-        "desc": "Enables or disables notification sounds.",
-        "notes": [],
-        "signature": "Focus:setPlaySound(play)",
-        "type": "Method",
-        "returns": [
+        "def" : "Focus:setPlaySound(play)",
+        "desc" : "Enables or disables notification sounds.",
+        "notes" : [
+
+        ],
+        "signature" : "Focus:setPlaySound(play)",
+        "type" : "Method",
+        "returns" : [
           " * The Focus object"
         ],
-        "def": "Focus:setPlaySound(play)",
-        "parameters": [
+        "name" : "setPlaySound",
+        "parameters" : [
           " * play - A boolean, true to play sounds, false to disable sounds",
-          "",
           ""
         ]
       },
       {
-        "doc": "Enables or disables the menu bar item.\n\nParameters:\n * show - A boolean, true to show the menu bar item, false to remove it\n\n\nReturns:\n * The Focus object",
-        "stripped_doc": [
+        "doc" : "Enables or disables the menu bar item.\n\nParameters:\n * show - A boolean, true to show the menu bar item, false to remove it\n\nReturns:\n * The Focus object",
+        "stripped_doc" : [
           "Enables or disables the menu bar item.",
           ""
         ],
-        "name": "setShowMenuBar",
-        "desc": "Enables or disables the menu bar item.",
-        "notes": [],
-        "signature": "Focus:setShowMenuBar(show)",
-        "type": "Method",
-        "returns": [
+        "def" : "Focus:setShowMenuBar(show)",
+        "desc" : "Enables or disables the menu bar item.",
+        "notes" : [
+
+        ],
+        "signature" : "Focus:setShowMenuBar(show)",
+        "type" : "Method",
+        "returns" : [
           " * The Focus object"
         ],
-        "def": "Focus:setShowMenuBar(show)",
-        "parameters": [
+        "name" : "setShowMenuBar",
+        "parameters" : [
           " * show - A boolean, true to show the menu bar item, false to remove it",
-          "",
           ""
         ]
       }
-    ]
+    ],
+    "Command" : [
+
+    ],
+    "Field" : [
+
+    ],
+    "items" : [
+      {
+        "doc" : "Binds hotkeys for Focus actions.\n\nParameters:\n * mapping - A table containing hotkey definitions for actions. Supported actions are:\n   * toggleFlow - Toggle flow mode\n   * takeBreak - Start a break immediately\n   * start - Start Focus\n   * stop - Stop Focus\n\nReturns:\n * The Focus object",
+        "stripped_doc" : [
+          "Binds hotkeys for Focus actions.",
+          ""
+        ],
+        "def" : "Focus:bindHotkeys(mapping)",
+        "desc" : "Binds hotkeys for Focus actions.",
+        "notes" : [
+
+        ],
+        "signature" : "Focus:bindHotkeys(mapping)",
+        "type" : "Method",
+        "returns" : [
+          " * The Focus object"
+        ],
+        "name" : "bindHotkeys",
+        "parameters" : [
+          " * mapping - A table containing hotkey definitions for actions. Supported actions are:",
+          "   * toggleFlow - Toggle flow mode",
+          "   * takeBreak - Start a break immediately",
+          "   * start - Start Focus",
+          "   * stop - Stop Focus",
+          ""
+        ]
+      },
+      {
+        "doc" : "Applies Focus configuration without starting the timer.\n\nParameters:\n * config - An optional table containing configuration values:\n   * focusTime - Focus interval length in minutes\n   * breakTime - Break interval length in minutes\n   * postponeTime - Postpone duration in minutes\n   * playSound - A boolean, true to play sounds, false to disable sounds\n   * showTimer - A boolean, true to show the countdown timer, false to hide it\n   * hotkeys - A table passed to Focus:bindHotkeys()\n\nReturns:\n * The Focus object",
+        "stripped_doc" : [
+          "Applies Focus configuration without starting the timer.",
+          ""
+        ],
+        "def" : "Focus:configure([config])",
+        "desc" : "Applies Focus configuration without starting the timer.",
+        "notes" : [
+
+        ],
+        "signature" : "Focus:configure([config])",
+        "type" : "Method",
+        "returns" : [
+          " * The Focus object"
+        ],
+        "name" : "configure",
+        "parameters" : [
+          " * config - An optional table containing configuration values:",
+          "   * focusTime - Focus interval length in minutes",
+          "   * breakTime - Break interval length in minutes",
+          "   * postponeTime - Postpone duration in minutes",
+          "   * playSound - A boolean, true to play sounds, false to disable sounds",
+          "   * showTimer - A boolean, true to show the countdown timer, false to hide it",
+          "   * hotkeys - A table passed to Focus:bindHotkeys()",
+          ""
+        ]
+      },
+      {
+        "doc" : "Gets the current Focus state.\n\nParameters:\n * None\n\nReturns:\n * A table containing the current phase, remaining time, configured durations, flow mode state, and related runtime flags",
+        "stripped_doc" : [
+          "Gets the current Focus state.",
+          ""
+        ],
+        "def" : "Focus:getStatus()",
+        "desc" : "Gets the current Focus state.",
+        "notes" : [
+
+        ],
+        "signature" : "Focus:getStatus()",
+        "type" : "Method",
+        "returns" : [
+          " * A table containing the current phase, remaining time, configured durations, flow mode state, and related runtime flags"
+        ],
+        "name" : "getStatus",
+        "parameters" : [
+          " * None",
+          ""
+        ]
+      },
+      {
+        "doc" : "Initializes the Focus Spoon.\n\nParameters:\n * None\n\nReturns:\n * The Focus object",
+        "stripped_doc" : [
+          "Initializes the Focus Spoon.",
+          ""
+        ],
+        "def" : "Focus:init()",
+        "desc" : "Initializes the Focus Spoon.",
+        "notes" : [
+
+        ],
+        "signature" : "Focus:init()",
+        "type" : "Method",
+        "returns" : [
+          " * The Focus object"
+        ],
+        "name" : "init",
+        "parameters" : [
+          " * None",
+          ""
+        ]
+      },
+      {
+        "doc" : "Sets the break interval length.\n\nParameters:\n * minutes - A positive number containing the break interval length in minutes\n\nReturns:\n * The Focus object",
+        "stripped_doc" : [
+          "Sets the break interval length.",
+          ""
+        ],
+        "def" : "Focus:setBreakTime(minutes)",
+        "desc" : "Sets the break interval length.",
+        "notes" : [
+
+        ],
+        "signature" : "Focus:setBreakTime(minutes)",
+        "type" : "Method",
+        "returns" : [
+          " * The Focus object"
+        ],
+        "name" : "setBreakTime",
+        "parameters" : [
+          " * minutes - A positive number containing the break interval length in minutes",
+          ""
+        ]
+      },
+      {
+        "doc" : "Sets the focus interval length.\n\nParameters:\n * minutes - A positive number containing the focus interval length in minutes\n\nReturns:\n * The Focus object",
+        "stripped_doc" : [
+          "Sets the focus interval length.",
+          ""
+        ],
+        "def" : "Focus:setFocusTime(minutes)",
+        "desc" : "Sets the focus interval length.",
+        "notes" : [
+
+        ],
+        "signature" : "Focus:setFocusTime(minutes)",
+        "type" : "Method",
+        "returns" : [
+          " * The Focus object"
+        ],
+        "name" : "setFocusTime",
+        "parameters" : [
+          " * minutes - A positive number containing the focus interval length in minutes",
+          ""
+        ]
+      },
+      {
+        "doc" : "Sets the break overlay color.\n\nParameters:\n * color - A color table suitable for hs.canvas fillColor\n\nReturns:\n * The Focus object",
+        "stripped_doc" : [
+          "Sets the break overlay color.",
+          ""
+        ],
+        "def" : "Focus:setOverlayColor(color)",
+        "desc" : "Sets the break overlay color.",
+        "notes" : [
+
+        ],
+        "signature" : "Focus:setOverlayColor(color)",
+        "type" : "Method",
+        "returns" : [
+          " * The Focus object"
+        ],
+        "name" : "setOverlayColor",
+        "parameters" : [
+          " * color - A color table suitable for hs.canvas fillColor",
+          ""
+        ]
+      },
+      {
+        "doc" : "Enables or disables notification sounds.\n\nParameters:\n * play - A boolean, true to play sounds, false to disable sounds\n\nReturns:\n * The Focus object",
+        "stripped_doc" : [
+          "Enables or disables notification sounds.",
+          ""
+        ],
+        "def" : "Focus:setPlaySound(play)",
+        "desc" : "Enables or disables notification sounds.",
+        "notes" : [
+
+        ],
+        "signature" : "Focus:setPlaySound(play)",
+        "type" : "Method",
+        "returns" : [
+          " * The Focus object"
+        ],
+        "name" : "setPlaySound",
+        "parameters" : [
+          " * play - A boolean, true to play sounds, false to disable sounds",
+          ""
+        ]
+      },
+      {
+        "doc" : "Sets the postpone duration.\n\nParameters:\n * minutes - A positive number containing the postpone duration in minutes\n\nReturns:\n * The Focus object",
+        "stripped_doc" : [
+          "Sets the postpone duration.",
+          ""
+        ],
+        "def" : "Focus:setPostponeTime(minutes)",
+        "desc" : "Sets the postpone duration.",
+        "notes" : [
+
+        ],
+        "signature" : "Focus:setPostponeTime(minutes)",
+        "type" : "Method",
+        "returns" : [
+          " * The Focus object"
+        ],
+        "name" : "setPostponeTime",
+        "parameters" : [
+          " * minutes - A positive number containing the postpone duration in minutes",
+          ""
+        ]
+      },
+      {
+        "doc" : "Enables or disables the menu bar item.\n\nParameters:\n * show - A boolean, true to show the menu bar item, false to remove it\n\nReturns:\n * The Focus object",
+        "stripped_doc" : [
+          "Enables or disables the menu bar item.",
+          ""
+        ],
+        "def" : "Focus:setShowMenuBar(show)",
+        "desc" : "Enables or disables the menu bar item.",
+        "notes" : [
+
+        ],
+        "signature" : "Focus:setShowMenuBar(show)",
+        "type" : "Method",
+        "returns" : [
+          " * The Focus object"
+        ],
+        "name" : "setShowMenuBar",
+        "parameters" : [
+          " * show - A boolean, true to show the menu bar item, false to remove it",
+          ""
+        ]
+      },
+      {
+        "doc" : "Enables or disables the on-screen countdown timer.\n\nParameters:\n * show - A boolean, true to show the countdown timer, false to hide it\n\nReturns:\n * The Focus object",
+        "stripped_doc" : [
+          "Enables or disables the on-screen countdown timer.",
+          ""
+        ],
+        "def" : "Focus:setShowTimer(show)",
+        "desc" : "Enables or disables the on-screen countdown timer.",
+        "notes" : [
+
+        ],
+        "signature" : "Focus:setShowTimer(show)",
+        "type" : "Method",
+        "returns" : [
+          " * The Focus object"
+        ],
+        "name" : "setShowTimer",
+        "parameters" : [
+          " * show - A boolean, true to show the countdown timer, false to hide it",
+          ""
+        ]
+      },
+      {
+        "doc" : "Configures and starts Focus, including background watchers, the menu bar item, and the focus timer.\n\nParameters:\n * config - An optional table containing startup configuration:\n   * focusTime - Focus interval length in minutes\n   * breakTime - Break interval length in minutes\n   * postponeTime - Postpone duration in minutes\n   * playSound - A boolean, true to play sounds, false to disable sounds\n   * showTimer - A boolean, true to show the countdown timer, false to hide it\n   * hotkeys - A table passed to Focus:bindHotkeys()\n\nReturns:\n * The Focus object",
+        "stripped_doc" : [
+          "Configures and starts Focus, including background watchers, the menu bar item, and the focus timer.",
+          ""
+        ],
+        "def" : "Focus:start([config])",
+        "desc" : "Configures and starts Focus, including background watchers, the menu bar item, and the focus timer.",
+        "notes" : [
+
+        ],
+        "signature" : "Focus:start([config])",
+        "type" : "Method",
+        "returns" : [
+          " * The Focus object"
+        ],
+        "name" : "start",
+        "parameters" : [
+          " * config - An optional table containing startup configuration:",
+          "   * focusTime - Focus interval length in minutes",
+          "   * breakTime - Break interval length in minutes",
+          "   * postponeTime - Postpone duration in minutes",
+          "   * playSound - A boolean, true to play sounds, false to disable sounds",
+          "   * showTimer - A boolean, true to show the countdown timer, false to hide it",
+          "   * hotkeys - A table passed to Focus:bindHotkeys()",
+          ""
+        ]
+      },
+      {
+        "doc" : "Stops Focus and removes all timers, watchers, event taps, overlays, and menu bar items.\n\nParameters:\n * None\n\nReturns:\n * The Focus object",
+        "stripped_doc" : [
+          "Stops Focus and removes all timers, watchers, event taps, overlays, and menu bar items.",
+          ""
+        ],
+        "def" : "Focus:stop()",
+        "desc" : "Stops Focus and removes all timers, watchers, event taps, overlays, and menu bar items.",
+        "notes" : [
+
+        ],
+        "signature" : "Focus:stop()",
+        "type" : "Method",
+        "returns" : [
+          " * The Focus object"
+        ],
+        "name" : "stop",
+        "parameters" : [
+          " * None",
+          ""
+        ]
+      },
+      {
+        "doc" : "Starts a break immediately.\n\nParameters:\n * None\n\nReturns:\n * The Focus object",
+        "stripped_doc" : [
+          "Starts a break immediately.",
+          ""
+        ],
+        "def" : "Focus:takeBreak()",
+        "desc" : "Starts a break immediately.",
+        "notes" : [
+
+        ],
+        "signature" : "Focus:takeBreak()",
+        "type" : "Method",
+        "returns" : [
+          " * The Focus object"
+        ],
+        "name" : "takeBreak",
+        "parameters" : [
+          " * None",
+          ""
+        ]
+      },
+      {
+        "doc" : "Toggles flow mode. In flow mode, the focus timer is paused until flow mode is disabled.\n\nParameters:\n * None\n\nReturns:\n * The Focus object",
+        "stripped_doc" : [
+          "Toggles flow mode. In flow mode, the focus timer is paused until flow mode is disabled.",
+          ""
+        ],
+        "def" : "Focus:toggleFlow()",
+        "desc" : "Toggles flow mode. In flow mode, the focus timer is paused until flow mode is disabled.",
+        "notes" : [
+
+        ],
+        "signature" : "Focus:toggleFlow()",
+        "type" : "Method",
+        "returns" : [
+          " * The Focus object"
+        ],
+        "name" : "toggleFlow",
+        "parameters" : [
+          " * None",
+          ""
+        ]
+      }
+    ],
+    "name" : "Focus"
   }
 ]

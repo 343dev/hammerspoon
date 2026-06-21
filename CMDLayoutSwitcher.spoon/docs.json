@@ -17,7 +17,7 @@
           "on its own. Set directly or pass as leftLayout to start().",
           "See hs.keycodes.layouts()."
         ],
-        "name" : "leftLayout",
+        "def" : "CMDLayoutSwitcher.leftLayout",
         "desc" : "The keyboard layout name to switch to when the left Command key is tapped",
         "notes" : [
 
@@ -27,7 +27,7 @@
         "returns" : [
 
         ],
-        "def" : "CMDLayoutSwitcher.leftLayout",
+        "name" : "leftLayout",
         "parameters" : [
 
         ]
@@ -39,7 +39,7 @@
           "on its own. Set directly or pass as rightLayout to start().",
           "See hs.keycodes.layouts()."
         ],
-        "name" : "rightLayout",
+        "def" : "CMDLayoutSwitcher.rightLayout",
         "desc" : "The keyboard layout name to switch to when the right Command key is tapped",
         "notes" : [
 
@@ -49,7 +49,7 @@
         "returns" : [
 
         ],
-        "def" : "CMDLayoutSwitcher.rightLayout",
+        "name" : "rightLayout",
         "parameters" : [
 
         ]
@@ -58,17 +58,15 @@
     "stripped_doc" : [
 
     ],
-    "type" : "Module",
     "Deprecated" : [
 
     ],
+    "type" : "Module",
     "desc" : "Select the keyboard layout based on a lone tap of a Command key.",
     "Constructor" : [
 
     ],
-    "Field" : [
-
-    ],
+    "doc" : "Select the keyboard layout based on a lone tap of a Command key.\n\nLeft Command tap  (press & release without any other key) -> leftLayout\nRight Command tap (press & release without any other key) -> rightLayout\n\nCommand-key combinations such as CMD+A, CMD+C, CMD+Tab, CMD+Shift+3, etc.\ndo not switch the layout — the tap only counts when Command is pressed and\nreleased on its own.\n\nSwitching is purely event-driven (no timers \/ intervals) and every event is\nobserved read-only and passed through unchanged, so all normal Command usage\nkeeps working.\n\nUsage:\n```lua\nhs.loadSpoon(\"CMDLayoutSwitcher\")\nspoon.CMDLayoutSwitcher:start({\n  leftLayout = \"ABC\",\n  rightLayout = \"Russian\",\n})\n```\n\nDownload: https:\/\/github.com\/343dev\/spoons",
     "Method" : [
       {
         "doc" : "Prepares the Spoon. Called automatically by hs.loadSpoon().\n\nDoes not start any watchers (per Spoon conventions); use start() to begin.\n\nParameters:\n * None\n\nReturns:\n * The CMDLayoutSwitcher object",
@@ -78,7 +76,7 @@
           "Does not start any watchers (per Spoon conventions); use start() to begin.",
           ""
         ],
-        "name" : "init",
+        "def" : "CMDLayoutSwitcher:init()",
         "desc" : "Prepares the Spoon. Called automatically by hs.loadSpoon().",
         "notes" : [
 
@@ -88,7 +86,7 @@
         "returns" : [
           " * The CMDLayoutSwitcher object"
         ],
-        "def" : "CMDLayoutSwitcher:init()",
+        "name" : "init",
         "parameters" : [
           " * None",
           ""
@@ -107,7 +105,7 @@
           "the observer.",
           ""
         ],
-        "name" : "start",
+        "def" : "CMDLayoutSwitcher:start([config])",
         "desc" : "Configures the target layouts, starts observing Command keys, and switches",
         "notes" : [
 
@@ -117,7 +115,7 @@
         "returns" : [
           " * The CMDLayoutSwitcher object"
         ],
-        "def" : "CMDLayoutSwitcher:start([config])",
+        "name" : "start",
         "parameters" : [
           " * config - An optional table with leftLayout and\/or rightLayout string",
           "   values. These override CMDLayoutSwitcher.leftLayout and",
@@ -131,7 +129,7 @@
           "Stops observing Command keys.",
           ""
         ],
-        "name" : "stop",
+        "def" : "CMDLayoutSwitcher:stop()",
         "desc" : "Stops observing Command keys.",
         "notes" : [
 
@@ -141,7 +139,7 @@
         "returns" : [
           " * The CMDLayoutSwitcher object"
         ],
-        "def" : "CMDLayoutSwitcher:stop()",
+        "name" : "stop",
         "parameters" : [
           " * None",
           ""
@@ -149,6 +147,9 @@
       }
     ],
     "Command" : [
+
+    ],
+    "Field" : [
 
     ],
     "items" : [
@@ -159,7 +160,7 @@
           "on its own. Set directly or pass as leftLayout to start().",
           "See hs.keycodes.layouts()."
         ],
-        "name" : "leftLayout",
+        "def" : "CMDLayoutSwitcher.leftLayout",
         "desc" : "The keyboard layout name to switch to when the left Command key is tapped",
         "notes" : [
 
@@ -169,7 +170,7 @@
         "returns" : [
 
         ],
-        "def" : "CMDLayoutSwitcher.leftLayout",
+        "name" : "leftLayout",
         "parameters" : [
 
         ]
@@ -181,7 +182,7 @@
           "on its own. Set directly or pass as rightLayout to start().",
           "See hs.keycodes.layouts()."
         ],
-        "name" : "rightLayout",
+        "def" : "CMDLayoutSwitcher.rightLayout",
         "desc" : "The keyboard layout name to switch to when the right Command key is tapped",
         "notes" : [
 
@@ -191,7 +192,7 @@
         "returns" : [
 
         ],
-        "def" : "CMDLayoutSwitcher.rightLayout",
+        "name" : "rightLayout",
         "parameters" : [
 
         ]
@@ -204,7 +205,7 @@
           "Does not start any watchers (per Spoon conventions); use start() to begin.",
           ""
         ],
-        "name" : "init",
+        "def" : "CMDLayoutSwitcher:init()",
         "desc" : "Prepares the Spoon. Called automatically by hs.loadSpoon().",
         "notes" : [
 
@@ -214,7 +215,7 @@
         "returns" : [
           " * The CMDLayoutSwitcher object"
         ],
-        "def" : "CMDLayoutSwitcher:init()",
+        "name" : "init",
         "parameters" : [
           " * None",
           ""
@@ -233,7 +234,7 @@
           "the observer.",
           ""
         ],
-        "name" : "start",
+        "def" : "CMDLayoutSwitcher:start([config])",
         "desc" : "Configures the target layouts, starts observing Command keys, and switches",
         "notes" : [
 
@@ -243,7 +244,7 @@
         "returns" : [
           " * The CMDLayoutSwitcher object"
         ],
-        "def" : "CMDLayoutSwitcher:start([config])",
+        "name" : "start",
         "parameters" : [
           " * config - An optional table with leftLayout and\/or rightLayout string",
           "   values. These override CMDLayoutSwitcher.leftLayout and",
@@ -257,7 +258,7 @@
           "Stops observing Command keys.",
           ""
         ],
-        "name" : "stop",
+        "def" : "CMDLayoutSwitcher:stop()",
         "desc" : "Stops observing Command keys.",
         "notes" : [
 
@@ -267,14 +268,13 @@
         "returns" : [
           " * The CMDLayoutSwitcher object"
         ],
-        "def" : "CMDLayoutSwitcher:stop()",
+        "name" : "stop",
         "parameters" : [
           " * None",
           ""
         ]
       }
     ],
-    "doc" : "Select the keyboard layout based on a lone tap of a Command key.\n\nLeft Command tap  (press & release without any other key) -> leftLayout\nRight Command tap (press & release without any other key) -> rightLayout\n\nCommand-key combinations such as CMD+A, CMD+C, CMD+Tab, CMD+Shift+3, etc.\ndo not switch the layout — the tap only counts when Command is pressed and\nreleased on its own.\n\nSwitching is purely event-driven (no timers \/ intervals) and every event is\nobserved read-only and passed through unchanged, so all normal Command usage\nkeeps working.\n\nDownload: https:\/\/github.com\/343dev\/spoons",
     "name" : "CMDLayoutSwitcher"
   }
 ]
