@@ -1,60 +1,73 @@
 # CMDLayoutSwitcher.spoon
 
-Select the macOS keyboard layout by **tapping a Command key on its own**.
+Hammerspoon Spoon that selects the macOS keyboard layout by tapping a Command key on its own.
 
-| Tap (press & release, no other key) | Layout        |
-| ----------------------------------- | ------------- |
-| **Left  ⌘**                          | `leftLayout`  |
-| **Right ⌘**                          | `rightLayout` |
+Left Command switches to `leftLayout`; Right Command switches to `rightLayout`. Command combinations such as Cmd+A, Cmd+C, Cmd+Tab, and Cmd+Shift+3 are ignored.
 
-**Command combinations are ignored.** CMD+A, CMD+C, CMD+Tab, CMD+Shift+3, … do
-**not** switch the layout — only a lone Command tap does. The switch happens on
-key *release*, purely via events (no timers), and every event is passed through
-unchanged, so all normal Command shortcuts keep working.
+## Requirements
+
+- Hammerspoon
+- Hammerspoon Accessibility permission for event taps
 
 ## Install
 
-Copy (or symlink) this folder to:
+Copy or symlink this folder to:
 
-```
+```text
 ~/.hammerspoon/Spoons/CMDLayoutSwitcher.spoon/
 ```
 
+Or distribute it as `CMDLayoutSwitcher.spoon.zip`; after unzipping, double-click the `.spoon` bundle to install it with Hammerspoon.
+
 ## Use
 
-In your `init.lua`:
+In your Hammerspoon `init.lua`:
 
 ```lua
 hs.loadSpoon("CMDLayoutSwitcher")
-
 spoon.CMDLayoutSwitcher:start({
   leftLayout = "ABC",
   rightLayout = "Russian",
 })
 ```
 
-### Layout names
+## Configuration
 
-Layout names can vary by macOS version ("ABC" vs "U.S.", "Russian" vs
-"Russian - PC"). Check yours with `hs.keycodes.layouts()` in the Hammerspoon
-console, then pass the exact names to `:start()`:
+Configure target layouts in `start()` or as public properties before calling `start()`:
 
 ```lua
-spoon.CMDLayoutSwitcher:start({
-  leftLayout = "U.S.",
-  rightLayout = "Russian - PC",
-})
-```
+hs.loadSpoon("CMDLayoutSwitcher")
 
-You can also configure layouts as properties before starting:
-
-```lua
 spoon.CMDLayoutSwitcher.leftLayout = "U.S."
 spoon.CMDLayoutSwitcher.rightLayout = "Russian - PC"
 spoon.CMDLayoutSwitcher:start()
 ```
 
-Toggle at runtime: `spoon.CMDLayoutSwitcher:stop()` / `spoon.CMDLayoutSwitcher:start()`.
+Layout names can vary by macOS version (`ABC` vs `U.S.`, `Russian` vs `Russian - PC`). Check yours with `hs.keycodes.layouts()` in the Hammerspoon Console and pass the exact names.
 
-> Hammerspoon needs **Accessibility** permission for event taps — grant it if
-> prompted.
+## Behavior
+
+1. `start()` validates the configured layout names and starts an event tap.
+2. A tap counts only when Command is pressed and released with no other key in between.
+3. Left Command taps switch to `leftLayout`; Right Command taps switch to `rightLayout`.
+4. Command-key combinations are passed through unchanged and do not switch layouts.
+5. `stop()` stops the event tap and clears internal tap state.
+
+## API
+
+Public API is documented in Hammerspoon docstring format in `init.lua` and collected in `docs.json`.
+
+Main methods:
+
+- `CMDLayoutSwitcher:init()` — initialize the Spoon without starting the event tap.
+- `CMDLayoutSwitcher:start([config])` — configure layouts and start observing Command-key taps.
+- `CMDLayoutSwitcher:stop()` — stop observing Command-key taps.
+
+Public properties:
+
+- `CMDLayoutSwitcher.leftLayout`
+- `CMDLayoutSwitcher.rightLayout`
+
+## License
+
+MIT — see <https://opensource.org/licenses/MIT>.

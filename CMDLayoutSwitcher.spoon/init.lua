@@ -13,6 +13,15 @@
 --- observed read-only and passed through unchanged, so all normal Command usage
 --- keeps working.
 ---
+--- Usage:
+--- ```lua
+--- hs.loadSpoon("CMDLayoutSwitcher")
+--- spoon.CMDLayoutSwitcher:start({
+---   leftLayout = "ABC",
+---   rightLayout = "Russian",
+--- })
+--- ```
+---
 --- Download: https://github.com/343dev/spoons
 
 local obj = {}

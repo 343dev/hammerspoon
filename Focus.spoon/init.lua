@@ -3,7 +3,7 @@
 --- Timer with customizable focus and break intervals.
 ---
 --- Usage:
---- ```
+--- ```lua
 --- hs.loadSpoon("Focus")
 --- spoon.Focus:start({
 ---   focusTime = 55,
@@ -17,6 +17,8 @@
 ---   },
 --- })
 --- ```
+---
+--- Download: https://github.com/343dev/spoons
 
 local caffeinate = require("hs.caffeinate")
 local canvas = require("hs.canvas")
