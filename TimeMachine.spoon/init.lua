@@ -70,15 +70,21 @@ local textColor = { white = 1, alpha = 0.6 }
 local shadowColor = { red = 0, green = 0, blue = 0, alpha = 0.5 }
 
 local function trim(value)
-	return (value or ""):gsub("^%s+", ""):gsub("%s+$", "")
+	local trimmed = (value or ""):gsub("^%s+", ""):gsub("%s+$", "")
+	return trimmed
 end
 
 local function unquote(value)
-	return trim(value):gsub("^\"", ""):gsub("\"$", "")
+	local unquoted = trim(value):gsub("^\"", ""):gsub("\"$", "")
+	return unquoted
 end
 
 local function parseBoolean(value)
 	return unquote(value) == "1" or unquote(value) == "true"
+end
+
+local function parseNumber(value)
+	return tonumber(unquote(value))
 end
 
 local function parseTmutilStatus(output)
@@ -92,7 +98,7 @@ local function parseTmutilStatus(output)
 	local progressDepth = 0
 
 	for line in output:gmatch("[^\r\n]+") do
-		local key, value = line:match("^%s*([%w_]+)%s*=%s*(.-)%s*;?%s*$")
+		local key, value = line:match("^%s*\"?([%w_]+)\"?%s*=%s*(.-)%s*;?%s*$")
 
 		if key and value then
 			if key == "Progress" and value:find("{", 1, true) then
@@ -102,10 +108,12 @@ local function parseTmutilStatus(output)
 				result.Running = parseBoolean(value)
 			elseif key == "BackupPhase" then
 				result.BackupPhase = unquote(value)
-			elseif inProgress and key == "Percent" then
-				result.Progress.Percent = tonumber(unquote(value)) or 0
-			elseif inProgress and key == "TimeRemaining" then
-				result.Progress.TimeRemaining = tonumber(unquote(value))
+			elseif key == "FractionOfProgressBar" then
+				result.Progress.Percent = result.Progress.Percent or parseNumber(value)
+			elseif key == "Percent" then
+				result.Progress.Percent = parseNumber(value) or 0
+			elseif key == "TimeRemaining" then
+				result.Progress.TimeRemaining = parseNumber(value)
 			end
 		end
 
@@ -306,7 +314,7 @@ function obj:check()
 		self.task = nil
 
 		if exitCode ~= 0 then
-			self.logger.w("tmutil status failed: " .. (stderr or "exit " .. tostring(exitCode)))
+			self.logger.w("tmutil status failed: " .. (stderr or ("exit " .. tostring(exitCode))))
 			scheduleNextCheck(self, self.checkInterval)
 			return false
 		end
