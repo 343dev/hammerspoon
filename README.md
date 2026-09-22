@@ -1,4 +1,4 @@
-<img src="hammerspoon-logo.svg" alt="Hammerspoon Spoons logo" width="128">
+<img src="hammerspoon-logo.png" alt="Crossed hammer and spoon on an orange circular background" title="Small spoons. Big automation." width="128">
 
 # Hammerspoon Spoons
 
