@@ -1,4 +1,4 @@
-<img src="hammerspoon-logo.png" alt="Hammerspoon Spoons logo" width="128">
+<img src="hammerspoon-logo.svg" alt="Hammerspoon Spoons logo" width="128">
 
 # Hammerspoon Spoons
 
