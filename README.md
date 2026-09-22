@@ -1,3 +1,5 @@
+<img src="hammerspoon-logo.png" alt="Hammerspoon Spoons logo" width="128">
+
 # Hammerspoon Spoons
 
 A collection of custom [Hammerspoon](https://www.hammerspoon.org/) Spoon plugins for macOS automation and menubar utilities.
